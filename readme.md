@@ -30,6 +30,8 @@
 
 ### Sketches
 
+![alt text](image.png)
+
 ### Timeline
 
 # Project 2 Documentation
