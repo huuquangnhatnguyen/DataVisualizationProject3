@@ -1,26 +1,11 @@
-const nonCharacters = [
-  "All",
-  "Scene",
-  "Voice",
-  "Together",
-  "Story",
-  "Teleplay",
-  "Receptionist",
-  "Man",
-  "Waitress",
-  "Girl",
-  "Costume",
-  "Waiter",
-  "Mother",
-  "Missy",
-  "Guy",
-  "Woman",
-  "Nurse",
-  "Assistant",
-  "TV",
-  "Employee",
-  "Tattooist",
-  "Radio",
+const mainCharacters = [
+  "Sheldon",
+  "Leonard",
+  "Penny",
+  "Howard",
+  "Bernadette",
+  "Raj",
+  "Amy",
 ];
 // import the whole show data
 // d3.csv("data/big_bang_scripts.csv").then((data) => {
@@ -36,13 +21,6 @@ const nonCharacters = [
 
 // import one episode data
 d3.csv("data/big_bang_series_03.csv").then((data) => {
-  //   data.forEach((d, i) => {
-  //     d.episode = +d.episode;
-  //     d.episode_name = d.episode_name_only;
-  //     d.dialogue = d.dialogue;
-  //     d.character = d.person_scene;
-  //   });
-
   let formattedData = data.map((d) => {
     return {
       episode: +d.episode,
@@ -53,21 +31,15 @@ d3.csv("data/big_bang_series_03.csv").then((data) => {
   });
 
   let uniqueEpisodes = UniqueEpisodes(formattedData);
-  let uniqueCharacters = UniqueCharacters(formattedData).filter(
+  let uniqueMainCharacters = UniqueCharacters(formattedData).filter(
     (element) =>
       /^[A-Z][a-zA-Z]*$/.test(element) &&
       !element.startsWith("(") &&
-      nonCharacters.includes(element) === false
+      mainCharacters.includes(element) === true
   );
-  let dialoguePerEpisode = uniqueEpisodes.map((episode) => {
-    return {
-      episode: episode,
-      dialogueCount: countDialougePerEpisode(formattedData, episode),
-    };
-  });
 
   let dialoguePerCharInEpisode = uniqueEpisodes.map((episode) => {
-    let dialogueCount = uniqueCharacters.map((char) => {
+    let dialogueCount = uniqueMainCharacters.map((char) => {
       return {
         character: char,
         dialogueCount: countDialougePerCharInAnEpisode(
@@ -79,15 +51,10 @@ d3.csv("data/big_bang_series_03.csv").then((data) => {
     });
     return {
       episode: episode,
-      dialogueCount: dialogueCount,
+      children: dialogueCount,
+      total: countDialougePerEpisode(formattedData, episode),
     };
   });
-  console.log(
-    uniqueCharacters,
-    uniqueEpisodes,
-    dialoguePerEpisode,
-    dialoguePerCharInEpisode
-  );
 
   let myStackedAreaChart = new StackAreaChart(
     {
@@ -96,7 +63,7 @@ d3.csv("data/big_bang_series_03.csv").then((data) => {
       containerHeight: 400,
       margin: { top: 20, right: 30, bottom: 30, left: 40 },
     },
-    formattedData
+    dialoguePerCharInEpisode
   );
 });
 
