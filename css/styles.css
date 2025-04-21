@@ -13,6 +13,7 @@
 
 html {
     background-color: #213448;
+    padding: 10px;
     color: #ECEFCA;
     font-family: 'Special Gothic Expanded One', monospace;
     font-size: 16px;
@@ -21,12 +22,13 @@ html {
 
 .cast-tabs {
     overflow: hidden;
-    border: 1px solid black;
+    border: none;
     background-color: #384d5e;
     display: flex;
 }
 
 .cast-tabs button {
+    padding: 10px;
     background-color: inherit;
     color: #ECEFCA;
     border: none;
@@ -40,20 +42,23 @@ html {
 }
 
 .cast-tabs button:hover {
-    background-color: #2b3c4e;
+    background-color: #1d2935;
 }
 
 .cast-tabs button.active {
     background-color: #2b3c4e;
+    padding: 10px;
     color: #ECEFCA;
+    width: 100%;
 }
 
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: none;
     border-top: none;
     animation: fadeEffect 1s;
+    background-color: #2b3c4e;
 }
 
 @keyframes fadeEffect {
