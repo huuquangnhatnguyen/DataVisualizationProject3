@@ -2,9 +2,9 @@ class StackAreaChart {
   /**
    * @param {Object} _config
    * @param {Object[]} _data
-   *@param
+   * @param {string[]} _mainCharacters
    */
-  constructor(_config, _data) {
+  constructor(_config, _data, _mainCharacters) {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth || 600,
@@ -14,6 +14,7 @@ class StackAreaChart {
 
     // Set the data
     this.data = _data;
+    this.mainCharacters = _mainCharacters;
 
     //Intialize the chart
     this.initVis();
@@ -23,20 +24,32 @@ class StackAreaChart {
     let vis = this;
     // console.log("initVis", this.config, this.data);
 
-    var sumstat = d3
-      .nest()
-      .key(function (d) {
-        return d.year;
-      })
-      .entries(data);
-
-    // console.log(sumstat);
-
     let hierarchyData = d3.hierarchy(
       { name: "root", children: this.data },
       (d) => d.children
     );
     console.log(hierarchyData.leaves());
+
+    const stack = d3
+      .stack()
+      .keys(this.mainCharacters)
+      .value((d) => d.data.dialogueCount);
+    vis.series = stack(hierarchyData.leaves());
+    console.log(vis.series);
+    var color = d3
+      .scaleOrdinal()
+      .domain(this.mainCharacters)
+      .range([
+        "#e41a1c",
+        "#377eb8",
+        "#4daf4a",
+        "#984ea3",
+        "#ff7f00",
+        "#ffff33",
+        "#a65628",
+        "#f781bf",
+        "#999999",
+      ]);
 
     vis.oneEpisode = this.data[0].children;
     // console.log(vis.oneEpisode);
@@ -100,7 +113,7 @@ class StackAreaChart {
     // Create the bars for the chart
     vis.chartGroup
       .append("path")
-      .datum(vis.oneEpisode)
+      .data(vis.series)
       .attr("transform", `translate(0, -${vis.config.margin.top})`)
       .attr("fill", "#cce5df")
       .attr("stroke", "#69b3a2")
@@ -110,15 +123,12 @@ class StackAreaChart {
         "d",
         d3
           .area()
-          .x((d) => x(d.character) + x.bandwidth() / 2)
+          .x((d) => {
+            console.log(d);
+            return x(d.data.character);
+          })
           .y0((d) => y(0))
           .y1((d) => y(d.dialogueCount))
       );
-    vis.chartGroup
-      .append("text")
-      .attr("text-anchor", "end")
-      .attr("x", width)
-      .attr("y", -margin.top)
-      .text("X axis title");
   }
 }

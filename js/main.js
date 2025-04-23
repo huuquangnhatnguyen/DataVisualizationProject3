@@ -63,7 +63,8 @@ d3.csv("data/big_bang_series_03.csv").then((data) => {
       containerHeight: 400,
       margin: { top: 20, right: 30, bottom: 30, left: 40 },
     },
-    dialoguePerCharInEpisode
+    dialoguePerCharInEpisode,
+    mainCharacters
   );
 });
 
