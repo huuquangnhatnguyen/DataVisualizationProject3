@@ -1,4 +1,85 @@
 #stacked-area-chart {
+  width: fit-content;
+  height: 400px;
+}
+
+:root {
+  --text-color: #ecefca;
+  --background-color: #213448;
+}
+
+#tree-map-chart {
   width: 100%;
   height: 400px;
+}
+/* Font */
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  background-color: #213448;
+  padding: 10px;
+  color: #ecefca;
+  font-family: "Special Gothic Expanded One", monospace;
+  font-size: 16px;
+}
+
+.cast-tabs {
+  overflow: hidden;
+  border: none;
+  background-color: #384d5e;
+  display: flex;
+}
+
+.cast-tabs button {
+  padding: 10px;
+  background-color: inherit;
+  color: #ecefca;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: auto;
+  transition: 1s;
+  flex: 1;
+  text-align: center;
+  font-size: 17px;
+}
+
+.cast-tabs button:hover {
+  background-color: #1d2935;
+}
+
+.cast-tabs button.active {
+  background-color: #2b3c4e;
+  padding: 10px;
+  color: #ecefca;
+  width: 100%;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+  animation: fadeEffect 1s;
+  background-color: #2b3c4e;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

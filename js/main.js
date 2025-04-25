@@ -1,3 +1,4 @@
+// constants
 const mainCharacters = [
   "Sheldon",
   "Leonard",
@@ -7,98 +8,114 @@ const mainCharacters = [
   "Raj",
   "Amy",
 ];
-// import the whole show data
-// d3.csv("data/big_bang_scripts.csv").then((data) => {
-//   data.forEach((d, i) => {
-//     d.episode = +d.episode;
-//     d.series = +d.series;
-//     d.episode_name = d.episode_name_only;
-//     d.dialogue = d.dialogue;
-//     d.character = d.person_scene;
-//   });
-//   console.log(data);
-// });
-
-// import one episode data
-d3.csv("data/big_bang_series_03.csv").then((data) => {
-  let formattedData = data.map((d) => {
-    return {
-      episode: +d.episode,
-      episode_name: d.episode_name_only,
-      character: d.person_scene,
-      dialogue: d.dialogue,
-    };
+const filePathByEpisodes = `data/big_bang_main_character_dialogues.csv`;
+const filePathBySeasons = `data/all_seasons_dialogues_count.csv`;
+// shared variables
+let seasonOptions = false;
+let filePath = filePathBySeasons;
+let myStackedAreaChart;
+let selectedMode = "Seasonal"; // default mode
+let selectedSeason = 1; // default season
+// draw the stacked chart
+d3.csv(filePath).then((data) => {
+  data.forEach((d) => {
+    d.episode = +d.episode;
+    d.season = +d.season;
   });
 
-  let uniqueEpisodes = UniqueEpisodes(formattedData);
-  let uniqueMainCharacters = UniqueCharacters(formattedData).filter(
-    (element) =>
-      /^[A-Z][a-zA-Z]*$/.test(element) &&
-      !element.startsWith("(") &&
-      mainCharacters.includes(element) === true
-  );
+  // let filterredData = DataFilterBySeason(selectedSeason, data);
+  let filterredData =
+    selectedMode == "Episodes"
+      ? DataFilterBySeason(selectedSeason, data)
+      : data;
 
-  let dialoguePerCharInEpisode = uniqueEpisodes.map((episode) => {
-    let dialogueCount = uniqueMainCharacters.map((char) => {
-      return {
-        character: char,
-        dialogueCount: countDialougePerCharInAnEpisode(
-          formattedData,
-          char,
-          episode
-        ).length,
-      };
-    });
-    return {
-      episode: episode,
-      children: dialogueCount,
-      total: countDialougePerEpisode(formattedData, episode),
-    };
-  });
-
-  let myStackedAreaChart = new StackAreaChart(
+  myStackedAreaChart = new StackAreaChart(
     {
       parentElement: "#stacked-area-chart",
-      containerWidth: 600,
-      containerHeight: 400,
-      margin: { top: 20, right: 30, bottom: 30, left: 40 },
+      containerWidth: 800,
+      containerHeight: 600,
+      margin: { top: 40, right: 30, bottom: 50, left: 60 },
+      chartTitle: "Big Bang Theory Character Dialogues",
+      xAxisTitle: "Season #",
+      yAxisTitle: "# of Lines",
     },
-    dialoguePerCharInEpisode,
+    filterredData,
     mainCharacters
   );
 });
-
 // helper functions to format the data
-function UniqueEpisodes(data) {
-  let uniqueEpisodes = [];
 
-  data.forEach((d) => {
-    if (!uniqueEpisodes.includes(d.episode)) {
-      uniqueEpisodes.push(d.episode);
-    }
+function DataFilterBySeason(season, data) {
+  let filterredData = data.filter((d) => d.season === season);
+  console.log(filterredData, data, season);
+  return filterredData;
+}
+
+function openTab(evt, charName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(charName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function toggleDisplayingMode(event) {
+  selectedMode = event.target.value;
+  if (selectedMode == "Seasonal") {
+    filePath = filePathBySeasons;
+    d3.csv(filePath).then((data) => {
+      data.forEach((d) => {
+        d.episode = +d.episode;
+        d.season = +d.season;
+      });
+      myStackedAreaChart.config.xAxisTitle = "Season #";
+      updateStackedAreaChart(data);
+    });
+    document.getElementById("season-select").style.display = "none";
+  }
+  if (selectedMode == "Episodes") {
+    filePath = filePathByEpisodes;
+    d3.csv(filePath).then((data) => {
+      data.forEach((d) => {
+        d.episode = +d.episode;
+        d.season = +d.season;
+      });
+      myStackedAreaChart.config.xAxisTitle = "Episode #";
+      updateStackedAreaChart(data);
+    });
+    document.getElementById("season-select").style.display = "flex";
+  }
+}
+
+function handleSeasonChange(event) {
+  selectedSeason = Number(event.target.value);
+  d3.csv(filePathByEpisodes).then((data) => {
+    data.forEach((d) => {
+      d.episode = +d.episode;
+      d.season = +d.season;
+    });
+    updateStackedAreaChart(data);
   });
-  return uniqueEpisodes;
 }
 
-function UniqueCharacters(data) {
-  let uniqueCharacters = [];
-
-  data.forEach((d) => {
-    if (!uniqueCharacters.includes(d.character)) {
-      uniqueCharacters.push(d.character);
-    }
-  });
-  return uniqueCharacters;
-}
-
-function countDialougePerCharInAnEpisode(data, char, episode) {
-  let filterredDataByCharInAnEpisode = data.filter(
-    (d) => d.character === char && d.episode === episode
-  );
-  return filterredDataByCharInAnEpisode;
-}
-
-function countDialougePerEpisode(data, episode) {
-  let filterredDataByEpisode = data.filter((d) => d.episode === episode);
-  return filterredDataByEpisode.length;
+function updateStackedAreaChart(data) {
+  let filterredData =
+    selectedMode == "Episodes"
+      ? DataFilterBySeason(selectedSeason, data)
+      : data;
+  myStackedAreaChart.data = filterredData;
+  myStackedAreaChart.updateVis();
 }

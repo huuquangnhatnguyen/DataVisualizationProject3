@@ -9,12 +9,9 @@ class StackAreaChart {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth || 600,
       containerHeight: _config.containerHeight || 400,
-      margin: _config.margin || { top: 40, right: 30, bottom: 50, left: 60 }, // Increased margins for titles
+      margin: _config.margin || { top: 20, right: 30, bottom: 30, left: 40 },
       legendWidth: 120,
       tooltipPadding: 10,
-      chartTitle: _config.chartTitle || "Character Dialogue Distribution",
-      xAxisTitle: _config.xAxisTitle || "Episode",
-      yAxisTitle: _config.yAxisTitle || "Number of Lines",
     };
 
     // Set the data
@@ -53,18 +50,6 @@ class StackAreaChart {
         `translate(${this.config.margin.left}, ${this.config.margin.top})`
       );
 
-    // Add chart title
-    this.svg
-      .append("text")
-      .attr("class", "chart-title")
-      .attr("x", this.config.containerWidth / 2)
-      .attr("y", this.config.margin.top / 2)
-      .attr("text-anchor", "middle")
-      .style("font-size", "16px")
-      .style("font-weight", "bold")
-      .style("fill", "white")
-      .text(this.config.chartTitle);
-
     // Create tooltip div if it doesn't exist
     this.tooltip = d3
       .select("body")
@@ -87,9 +72,7 @@ class StackAreaChart {
     let data = this.data;
 
     // Clear any previous elements to avoid duplication
-    vis.chartGroup
-      .selectAll(".x-axis,.y-axis,.layer,.episode-line,.axis-title")
-      .remove();
+    vis.chartGroup.selectAll(".x-axis,.y-axis,.layer").remove();
 
     // Set the x and y scales
     var x = d3
@@ -113,44 +96,6 @@ class StackAreaChart {
       .call(xAxis);
 
     vis.chartGroup.append("g").attr("class", "y-axis").call(yAxis);
-
-    // Add X axis title
-    vis.chartGroup
-      .append("text")
-      .attr("class", "axis-title x-axis-title")
-      .attr("text-anchor", "middle")
-      .attr("x", vis.width / 2)
-      .attr("y", vis.height + 35) // Position below x-axis
-      .style("fill", "white")
-      .text(vis.config.xAxisTitle);
-
-    // Add Y axis title
-    vis.chartGroup
-      .append("text")
-      .attr("class", "axis-title y-axis-title")
-      .attr("text-anchor", "middle")
-      .attr("transform", "rotate(-90)")
-      .attr("x", -vis.height / 2)
-      .attr("y", -40) // Position to the left of y-axis
-      .style("fill", "white")
-      .text(vis.config.yAxisTitle);
-
-    // Add vertical dotted lines for each episode
-    if (data.length > 0) {
-      for (let i = 1; i <= data.length; i++) {
-        vis.chartGroup
-          .append("line")
-          .attr("class", "episode-line")
-          .attr("x1", x(i))
-          .attr("y1", 0)
-          .attr("x2", x(i))
-          .attr("y2", vis.height)
-          .style("stroke", "white")
-          .style("stroke-width", 0.9)
-          .style("stroke-dasharray", "3,3")
-          .style("opacity", 0.5);
-      }
-    }
 
     // Create color scale
     var color = d3
@@ -179,7 +124,7 @@ class StackAreaChart {
       .append("path")
       .attr("class", (d) => `layer ${d.key.replace(/\s+/g, "-").toLowerCase()}`)
       .style("fill", (d) => color(d.key))
-      .style("opacity", 0.6)
+      .style("opacity", 0.8)
       .attr(
         "d",
         d3
@@ -204,7 +149,7 @@ class StackAreaChart {
         ).style("font-weight", "bold");
 
         // Show tooltip
-        vis.tooltip.transition().duration(200).style("opacity", 0.9);
+        vis.tooltip.transition().duration(200).style("opacity", 1);
       })
       .on("mousemove", function (event, d) {
         // Get mouse position
@@ -230,7 +175,7 @@ class StackAreaChart {
       })
       .on("mouseout", function (event, d) {
         // Restore original appearance
-        d3.select(this).style("opacity", 0.6).style("stroke", "none");
+        d3.select(this).style("opacity", 0.8).style("stroke", "none");
 
         // Restore legend item
         d3.select(
@@ -240,43 +185,6 @@ class StackAreaChart {
         // Hide tooltip
         vis.tooltip.transition().duration(500).style("opacity", 0);
       });
-
-    // // Add episode indicator line that follows mouse
-    // vis.chartGroup
-    //   .append("line")
-    //   .attr("class", "mouse-line")
-    //   .style("stroke", "white")
-    //   .style("stroke-width", 1)
-    //   .style("opacity", 0)
-    //   .attr("x1", 0)
-    //   .attr("x2", 0)
-    //   .attr("y1", 0)
-    //   .attr("y2", vis.height);
-
-    // // Add mouse move event to chart area to highlight the closest episode line
-    // vis.chartGroup
-    //   .append("rect")
-    //   .attr("width", vis.width)
-    //   .attr("height", vis.height)
-    //   .style("fill", "none")
-    //   .style("pointer-events", "all")
-    //   .on("mousemove", function (event) {
-    //     const xPos = d3.pointer(event)[0];
-    //     const episodeIndex = Math.round(x.invert(xPos));
-
-    //     // Only highlight if within valid range
-    //     if (episodeIndex >= 1 && episodeIndex <= data.length) {
-    //       // Position the indicator line at the nearest episode
-    //       d3.select(".mouse-line")
-    //         .attr("x1", x(episodeIndex))
-    //         .attr("x2", x(episodeIndex))
-    //         .style("opacity", 1);
-    //     }
-    //   })
-    //   .on("mouseout", function () {
-    //     // Hide the line when mouse leaves chart area
-    //     d3.select(".mouse-line").style("opacity", 0);
-    //   });
 
     // Add legend
     this.addLegend(color);
@@ -328,17 +236,6 @@ class StackAreaChart {
       .style("font-size", "12px")
       .style("fill", "white");
 
-    // Add legend title
-    legend
-      .append("text")
-      .attr("class", "legend-title")
-      .attr("x", 0)
-      .attr("y", -10)
-      .style("font-size", "12px")
-      .style("font-weight", "bold")
-      .style("fill", "white")
-      .text("Characters");
-
     // Add interactivity to legend
     legendItems
       .on("mouseover", function (event, d) {
@@ -364,23 +261,7 @@ class StackAreaChart {
 
   updateVis() {
     // Clear previous chart before redrawing
-    this.chartGroup
-      .selectAll(".layer, .x-axis, .y-axis, .episode-line, .axis-title")
-      .remove();
-    this.svg.selectAll(".chart-title").remove();
-
-    // Re-add chart title
-    this.svg
-      .append("text")
-      .attr("class", "chart-title")
-      .attr("x", this.config.containerWidth / 2)
-      .attr("y", this.config.margin.top / 2)
-      .attr("text-anchor", "middle")
-      .style("font-size", "16px")
-      .style("font-weight", "bold")
-      .style("fill", "white")
-      .text(this.config.chartTitle);
-
+    this.chartGroup.selectAll(".layer, .x-axis, .y-axis").remove();
     this.renderVis();
   }
 }
