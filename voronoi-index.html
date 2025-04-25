@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Big Bang Theory Characters Visualization</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  
+  <meta name="description" content="d3-voronoi-map visualization for Big Bang Theory characters">
+  
+  <script src="js/d3.v6.min.js"></script>
+  <script src="js/d3-weighted-voronoi.js"></script>
+  <script src="js/d3-voronoi-map.js"></script>
+  <script src="js/voronoi-map.js"></script>
+  <script src="js/main.js"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1 id="title">Big Bang Theory Character Distribution</h1>
+  </header>
+  
+  <div id="visualization-container">
+    <svg id="visualization"></svg>
+  </div>
+  
+  <footer>
+    <p class="tiny light">Based on d3-voronoi-map by @_Kcnarf</p>
+    <p class="tiny light">Adapted for Big Bang Theory Characters</p>
+  </footer>
+
+  <!-- First import the voronoi-map module, then main.js -->
+  <script src="voronoi-map.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
