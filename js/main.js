@@ -8,6 +8,7 @@ const mainCharacters = [
   "Raj",
   "Amy",
 ];
+document.getElementById("defaultOpen").click();
 
 const filePathByEpisodes = `data/script_scrape/big_bang_main_character_dialogues.csv`;
 const filePathBySeasons = `data/script_scrape/all_seasons_dialogues_count.csv`;
@@ -154,3 +155,20 @@ document.addEventListener("DOMContentLoaded", () => {
   voronoiMap.initVis();
   voronoiMap.updateWithNewData(csvPath, processData);
 });
+
+// draw a test chord chart
+const testData = [
+  [9021, 5871, 8916, 2868],
+  [1951, 0, 2060, 6171],
+  [8010, 16145, 0, 8045],
+  [1013, 990, 940, 0],
+];
+
+const testConfig = {
+  parentElement: "#chord-chart",
+  containerWidth: 600,
+  containerHeight: 600,
+  margin: { top: 10, right: 10, bottom: 10, left: 10 },
+};
+
+const testChord = new ChordChart(testConfig, testData);
