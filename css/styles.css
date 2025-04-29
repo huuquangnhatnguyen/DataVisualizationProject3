@@ -1,6 +1,6 @@
 #stacked-area-chart {
   width: fit-content;
-  height: 400px;
+  height: 600px;
 }
 
 :root {
@@ -82,4 +82,62 @@ html {
   to {
     opacity: 1;
   }
+}
+
+#visualization-container {
+  display: flex;
+  justify-content: center;
+}
+
+#visualization {
+  /* background-color: rgb(250, 250, 250); */
+  /* border: 1px solid #eee; */
+}
+
+.symbol {
+  fill: none;
+  stroke: lightgrey;
+  stroke-width: 14px;
+}
+
+.cell {
+  stroke: darkgrey;
+  stroke-width: 1px;
+}
+
+.cost {
+  text-anchor: middle;
+}
+
+.total-cost {
+  fill: lightgrey;
+  text-anchor: middle;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.legend-color {
+  stroke-width: 1px;
+  stroke: darkgrey;
+}
+
+.legend {
+  margin-bottom: 10px;
+}
+
+.highlighter {
+  fill: transparent;
+  stroke: none;
+}
+
+.highlight {
+  stroke: var(--text-color);
+  stroke-width: 3px;
+}
+
+#title {
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: x-large;
+  margin: 0;
 }
