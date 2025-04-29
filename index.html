@@ -4,6 +4,8 @@
     <title>TV shows</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <script src="js/d3.v6.min.js"></script>
+    <script src="js/d3-weighted-voronoi.js"></script>
+    <script src="js/d3-voronoi-map.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Fonts -->
@@ -253,7 +255,7 @@
 
       <!-- <h1>Project 3: TV shows</h1> -->
       <div>
-        <div style="margin: 20px 0 20px 0" display="flex">
+        <div style="margin: 20px 0 20px 0; height: fit-content" display="flex">
           <button
             id="Seasonal"
             class="view-mode-button"
@@ -294,11 +296,19 @@
         <div id="stacked-area-chart" class="chart-container"></div>
       </div>
     </div>
+    <div>
+      <div id="visualization-container">
+        <svg id="visualization"></svg>
+      </div>
+    </div>
 
     <!-- <div id="tree-map-chart" class="chart-container"></div> -->
 
     <script src="js/StackAreaChart.js"></script>
+    <script src="js/VoronoiMap.js"></script>
+
     <script src="js/main.js"></script>
+
     <div id="tooltip"></div>
   </body>
 </html>
