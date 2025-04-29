@@ -9,8 +9,8 @@ const mainCharacters = [
   "Amy",
 ];
 
-const filePathByEpisodes = `data/big_bang_main_character_dialogues.csv`;
-const filePathBySeasons = `data/all_seasons_dialogues_count.csv`;
+const filePathByEpisodes = `data/script_scrape/big_bang_main_character_dialogues.csv`;
+const filePathBySeasons = `data/script_scrape/all_seasons_dialogues_count.csv`;
 // shared variables
 let seasonOptions = false;
 let filePath = filePathBySeasons;
@@ -149,7 +149,7 @@ function processData(data, colorScale) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load data from CSV file
-  const csvPath = "../data/ss1-total-lines.csv";
+  const csvPath = "./data/script_scrape/ss1-total-lines.csv";
 
   voronoiMap.initVis();
   voronoiMap.updateWithNewData(csvPath, processData);
