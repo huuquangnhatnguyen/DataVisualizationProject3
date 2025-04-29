@@ -97,7 +97,7 @@ function toggleDisplayingMode(event) {
       myStackedAreaChart.config.xAxisTitle = "Episode #";
       updateStackedAreaChart(data);
     });
-    document.getElementById("season-select").style.display = "flex";
+    document.getElementById("season-select").style.display = "inline-block";
   }
 }
 

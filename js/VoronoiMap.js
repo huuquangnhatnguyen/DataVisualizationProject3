@@ -22,15 +22,13 @@ class VoronoiMap {
     this.colorScale = d3
       .scaleOrdinal()
       .range([
-        "#e41a1c",
-        "#377eb8",
-        "#4daf4a",
-        "#984ea3",
-        "#ff7f00",
-        "#ffff33",
-        "#a65628",
-        "#f781bf",
-        "#999999",
+        "#FF6B6B",
+        "#4DABF7",
+        "#69DB7C",
+        "#B197FC",
+        "#FFA94D",
+        "#FFD43B",
+        "#38D9A9",
       ]);
 
     // Constants
