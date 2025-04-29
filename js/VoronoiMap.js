@@ -4,10 +4,11 @@
 class VoronoiMap {
   /**
    * Constructor for the VoronoiMap
-   * @param {string} selector - CSS selector for the SVG element
+   * @param {string} _selector - CSS selector for the SVG element
+   * @param {string[]} _mainCharacters - Array of main character names
    * @param {Object} config - Optional configuration options for the visualization
    */
-  constructor(selector, config = null) {
+  constructor(selector, _mainCharacters, config = null) {
     this.selector = selector;
 
     // Default configuration
@@ -18,18 +19,24 @@ class VoronoiMap {
       baseRadius: 210,
     };
 
+    this.mainCharacters = _mainCharacters;
+
     // Color scale for character data
-    this.colorScale = d3
-      .scaleOrdinal()
-      .range([
-        "#FF6B6B",
-        "#4DABF7",
-        "#69DB7C",
-        "#B197FC",
-        "#FFA94D",
-        "#FFD43B",
-        "#38D9A9",
-      ]);
+
+    this.color = (d) => {
+      if (d.character === "Sheldon") return "#FF6B6B";
+      else if (d.character === "Leonard") return "#4DABF7";
+      else if (d.character === "Penny") return "#69DB7C";
+      else if (d.character === "Howard") return "#B197FC";
+      else if (d.character === "Bernadette") return "#FFA94D";
+      else if (d.character === "Raj") return "#FFD43B";
+      else if (d.character === "Amy") return "#38D9A9";
+      else if (d.cost > 1000) return "#FF85A2";
+      else if (d.cost > 100) return "#FFF3BF";
+      else if (d.cost > 50) return "#D3F9D8";
+      else if (d.cost > 10) return "#D0EBFF";
+      else return "#FFE3E3";
+    };
 
     // Constants
     this._2PI = 2 * Math.PI;
@@ -99,6 +106,19 @@ class VoronoiMap {
       .append("g")
       .classed("legend", true)
       .attr("transform", `translate(0, ${this.height - 20})`);
+
+    this.tooltip = d3
+      .select("body")
+      .append("div")
+      .attr("class", "voronoi-tooltip")
+      .style("opacity", 0)
+      .style("position", "absolute")
+      .style("background-color", "white")
+      .style("border", "1px solid #ddd")
+      .style("padding", "10px")
+      .style("border-radius", "4px")
+      .style("pointer-events", "none")
+      .style("box-shadow", "0 0 10px rgba(0,0,0,0.1)");
   }
 
   /**
@@ -157,12 +177,10 @@ class VoronoiMap {
    * @param {string} csvPath - Path to the CSV file
    * @param {function} processDataFn - Function to process the data
    */
-  updateWithNewData(csvPath = "../data/ss1-total-lines.csv", processDataFn) {
+  updateWithNewData(csvPath, processDataFn) {
     d3.csv(csvPath)
       .then((data) => {
-        console.log("Data loaded:", data);
-        const processedData = processDataFn(data, this.colorScale);
-        console.log("Processed data:", processedData);
+        const processedData = processDataFn(data, this.color);
         this.updateVis(processedData);
       })
       .catch((error) => {
@@ -206,8 +224,8 @@ class VoronoiMap {
       .classed("cost", true)
       .merge(costs)
       .attr("transform", (d) => `translate(${d.site.x}, ${d.site.y + 6})`)
-      .attr("fill", "var(--background-color)")
-      .text((d) => d.site.originalObject.data.originalData.cost);
+      .attr("fill", "var(--background-color)");
+    // .text((d) => d.site.originalObject.data.originalData.cost);
 
     costs.exit().remove();
 
@@ -295,7 +313,50 @@ class VoronoiMap {
     this.legendContainer.selectAll("*").remove();
 
     // Create new legends
-    const reversedData = [...data].reverse();
+    const reversedData = data.filter((d) =>
+      this.mainCharacters.includes(d.composition)
+    );
+    reversedData.push({
+      character: "> 1000 lines",
+      color: "#FF85A2",
+      composition: "> 1000 lines",
+      cost: 1000,
+      id: 8,
+      lines: "1000",
+    });
+    reversedData.push({
+      character: "> 100 lines",
+      color: "#FFF3BF",
+      composition: "> 100 lines",
+      cost: 100,
+      id: 8,
+      lines: "100",
+    });
+    reversedData.push({
+      character: "> 50 lines",
+      color: "#D3F9D8",
+      composition: "> 50 lines",
+      cost: 50,
+      id: 8,
+      lines: "50",
+    });
+    reversedData.push({
+      character: "> 10 lines",
+      color: "#D0EBFF",
+      composition: "> 10 lines",
+      cost: 1000,
+      id: 8,
+      lines: "10",
+    });
+    reversedData.push({
+      character: "< 10 lines",
+      color: "#FFE3E3",
+      composition: "< 10 lines",
+      cost: 1000,
+      id: 8,
+      lines: "0",
+    });
+    reversedData.reverse();
     const legends = this.legendContainer
       .selectAll(".legend")
       .data(reversedData)
@@ -400,7 +461,29 @@ class VoronoiMap {
       const id = d.id;
 
       d3.selectAll(`.group-${id}`)
-        .on("mouseenter", () => this.highlight(id, true))
+        .on("mouseenter", () => {
+          this.highlight(id, true);
+        })
+        .on("mouseover", (event, d) => {
+          this.tooltip.transition().duration(200).style("opacity", 0.9);
+        })
+
+        .on("mousemove", (event, d) => {
+          // const xPos = d3.pointer(event)[0];
+          // const index = Math.round(x.invert(xPos));
+
+          this.tooltip
+            .style("left", event.pageX + "px")
+            .style("top", event.pageY - 28 + "px")
+            .html(
+              `<div ><strong style="color: var(--background-color)">Character:</strong> <span style="color: ${d.site.originalObject.data.originalData.color}">${d.site.originalObject.data.originalData.composition}</span></div><div<strong style="color: var(--background-color)">Lines:</strong> ${d.site.originalObject.data.originalData.cost}</div>`
+            )
+            .style("left", event.pageX + "px")
+            .style("top", event.pageY - 28 + "px");
+        })
+        .on("mouseout", () => {
+          this.tooltip.transition().duration(500).style("opacity", 0);
+        })
         .on("mouseleave", () => this.highlight(id, false));
     });
   }
