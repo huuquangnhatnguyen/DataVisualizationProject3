@@ -3,7 +3,7 @@
   <head>
     <title>TV shows</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    
+
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="js/d3.v6.min.js"></script>
@@ -259,8 +259,12 @@
       <!-- Map container -->
 
       <!-- <h1>Project 3: TV shows</h1> -->
-      <div>
-        <div style="margin: 20px 0 20px 0; height: fit-content" display="flex">
+      <div id="area-chart-container">
+        <div
+          class="buttons-container"
+          style="margin: 20px 0 20px 0; height: fit-content"
+          display="flex"
+        >
           <button
             id="Seasonal"
             class="view-mode-button"
@@ -302,14 +306,54 @@
       </div>
     </div>
     <div>
+      <div
+        class="buttons-container"
+        style="margin: 20px 0 20px 0; height: fit-content"
+        display="flex"
+      >
+        <button
+          id="Seasonal"
+          class="view-mode-button"
+          value="Seasonal"
+          onclick="toggleDisplayingModeVoronoi(event)"
+        >
+          Whole Show
+        </button>
+
+        <button
+          id="Episodes"
+          class="view-mode-button"
+          value="Episodes"
+          onclick="toggleDisplayingModeVoronoi(event)"
+        >
+          Seasonal
+        </button>
+
+        <select
+          name="season-select-voronoi"
+          id="season-select-voronoi"
+          onchange="handleSeasonChangeVoronoi(event)"
+          style="display: none"
+        >
+          <option value="0">Select a season</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
       <div id="visualization-container">
         <svg id="visualization"></svg>
       </div>
     </div>
 
     <!-- <div id="tree-map-chart" class="chart-container"></div> -->
-
-    
 
     <div id="tooltip"></div>
   </body>
