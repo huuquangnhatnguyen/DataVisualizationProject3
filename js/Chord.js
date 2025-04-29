@@ -12,6 +12,7 @@ class ChordChart {
     };
     this.data = _data;
     this.initVis();
+    this.updateVis();
   }
 
   initVis() {
@@ -95,5 +96,21 @@ class ChordChart {
       .attr("d", d3.ribbon().radius(vis.width / 2 - 20))
       .style("fill", (d) => colors[d.source.index])
       .style("stroke", "black");
+  }
+
+  updateVis() {
+    const vis = this;
+
+    // Make it so that when a mouse hovers over a ribbon, it shows the source and target of the ribbon, while dimming the rest of the ribbons
+    vis.svg
+      .selectAll("path")
+      .on("mouseover", function (event, d) {
+        d3.select(this).style("opacity", 1);
+        d3.selectAll("path").style("opacity", 0.1);
+        d3.select(this).style("opacity", 1);
+      })
+      .on("mouseout", function (event, d) {
+        d3.selectAll("path").style("opacity", 1);
+      });
   }
 }
