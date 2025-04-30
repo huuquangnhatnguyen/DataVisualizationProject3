@@ -156,19 +156,27 @@ document.addEventListener("DOMContentLoaded", () => {
   voronoiMap.updateWithNewData(csvPath, processData);
 });
 
-// draw a test chord chart
-const testData = [
-  [9021, 5871, 8916, 2868],
-  [1951, 0, 2060, 6171],
-  [8010, 16145, 0, 8045],
-  [1013, 990, 940, 0],
-];
+let matrix = [];
+d3.csv(
+  "data/character_interactions/main_character_interactions_all_seasons.csv"
+).then((data) => {
+  matrix = Array(mainCharacters.length)
+    .fill()
+    .map((d) => Array(mainCharacters.length).fill(0));
+  data.forEach((d) => {
+    let i = mainCharacters.indexOf(d.from);
+    let j = mainCharacters.indexOf(d.to);
+    if (i >= 0 && j >= 0) {
+      matrix[j][i] = +d.count;
+    }
+  });
+  console.log(matrix);
+  const testChord = new ChordChart(testConfig, matrix, mainCharacters);
+});
 
 const testConfig = {
   parentElement: "#chord-chart",
-  containerWidth: 600,
-  containerHeight: 600,
-  margin: { top: 10, right: 10, bottom: 10, left: 10 },
+  containerWidth: 700,
+  containerHeight: 700,
+  margin: { top: 50, right: 150, bottom: 50, left: 50 },
 };
-
-const testChord = new ChordChart(testConfig, testData);
