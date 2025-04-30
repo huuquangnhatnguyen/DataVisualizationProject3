@@ -62,7 +62,7 @@ class StackAreaChart {
       .attr("text-anchor", "middle")
       .style("font-size", "16px")
       .style("font-weight", "bold")
-      .style("fill", "white")
+      .style("fill", "var(--text-color)")
       .text(this.config.chartTitle);
 
     // Create tooltip div if it doesn't exist
@@ -121,7 +121,7 @@ class StackAreaChart {
       .attr("text-anchor", "middle")
       .attr("x", vis.width / 2)
       .attr("y", vis.height + 35) // Position below x-axis
-      .style("fill", "white")
+      .style("fill", "var(--text-color)")
       .text(vis.config.xAxisTitle);
 
     // Add Y axis title
@@ -132,7 +132,7 @@ class StackAreaChart {
       .attr("transform", "rotate(-90)")
       .attr("x", -vis.height / 2)
       .attr("y", -40) // Position to the left of y-axis
-      .style("fill", "white")
+      .style("fill", "var(--text-color)")
       .text(vis.config.yAxisTitle);
 
     // Add vertical dotted lines for each episode
@@ -157,15 +157,13 @@ class StackAreaChart {
       .scaleOrdinal()
       .domain(this.mainCharacters)
       .range([
-        "#e41a1c",
-        "#377eb8",
-        "#4daf4a",
-        "#984ea3",
-        "#ff7f00",
-        "#ffff33",
-        "#a65628",
-        "#f781bf",
-        "#999999",
+        "#FF6B6B",
+        "#4DABF7",
+        "#69DB7C",
+        "#B197FC",
+        "#FFA94D",
+        "#FFD43B",
+        "#38D9A9",
       ]);
 
     // Stack data
@@ -326,7 +324,7 @@ class StackAreaChart {
       .attr("y", 10)
       .text((d) => d)
       .style("font-size", "12px")
-      .style("fill", "white");
+      .style("fill", "var(--text-color)");
 
     // Add legend title
     legend
@@ -336,7 +334,7 @@ class StackAreaChart {
       .attr("y", -10)
       .style("font-size", "12px")
       .style("font-weight", "bold")
-      .style("fill", "white")
+      .style("fill", "var(--text-color)")
       .text("Characters");
 
     // Add interactivity to legend
@@ -378,7 +376,7 @@ class StackAreaChart {
       .attr("text-anchor", "middle")
       .style("font-size", "16px")
       .style("font-weight", "bold")
-      .style("fill", "white")
+      .style("fill", "var(--text-color)")
       .text(this.config.chartTitle);
 
     this.renderVis();

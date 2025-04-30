@@ -18,6 +18,10 @@ let filePath = filePathBySeasons;
 let myStackedAreaChart;
 let selectedMode = "Seasonal"; // default mode
 let selectedSeason = 1; // default season
+
+let filePathVoronoi = `data/voronoi_data/character_total_dialogue_counts.csv`;
+let selectedModeVoronoi = "Seasonal"; // default mode for Voronoi map
+let selectedSeasonVoronoi = 1; // default season for Voronoi map
 // draw the stacked chart
 d3.csv(filePath).then((data) => {
   data.forEach((d) => {
@@ -98,7 +102,7 @@ function toggleDisplayingMode(event) {
       myStackedAreaChart.config.xAxisTitle = "Episode #";
       updateStackedAreaChart(data);
     });
-    document.getElementById("season-select").style.display = "flex";
+    document.getElementById("season-select").style.display = "inline-block";
   }
 }
 
@@ -122,7 +126,10 @@ function updateStackedAreaChart(data) {
   myStackedAreaChart.updateVis();
 }
 
-let voronoiMap = new VoronoiMap("#visualization");
+let voronoiMap = new VoronoiMap(
+  (_selector = "#visualization"),
+  (_mainCharacter = mainCharacters)
+);
 
 // Process the raw data for the visualization
 function processData(data, colorScale) {
@@ -135,7 +142,7 @@ function processData(data, colorScale) {
     d.id = i;
     d.composition = d.character;
     d.cost = +d.lines;
-    d.color = colorScale(i);
+    d.color = colorScale(d);
     totalCost += d.cost;
   });
 
@@ -150,11 +157,30 @@ function processData(data, colorScale) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load data from CSV file
-  const csvPath = "./data/script_scrape/ss1-total-lines.csv";
-
   voronoiMap.initVis();
-  voronoiMap.updateWithNewData(csvPath, processData);
+  voronoiMap.updateWithNewData(filePathVoronoi, processData);
 });
+
+function toggleDisplayingModeVoronoi(event) {
+  selectedModeVoronoi = event.target.value;
+  if (selectedModeVoronoi == "Seasonal") {
+    filePathVoronoi = `data/voronoi_data/character_total_dialogue_counts.csv`;
+    voronoiMap.updateWithNewData(filePathVoronoi, processData);
+    document.getElementById("season-select-voronoi").style.display = "none";
+  }
+  if (selectedModeVoronoi == "Episodes") {
+    filePath = `data/voronoi_data/character_dialogue_counts_season_0${selectedSeasonVoronoi}.csv`;
+    voronoiMap.updateWithNewData(filePath, processData);
+    document.getElementById("season-select-voronoi").style.display =
+      "inline-block";
+  }
+}
+
+function handleSeasonChangeVoronoi(event) {
+  selectedSeasonVoronoi = Number(event.target.value);
+  filePath = `data/voronoi_data/character_dialogue_counts_season_0${selectedSeasonVoronoi}.csv`;
+  voronoiMap.updateWithNewData(filePath, processData);
+}
 
 let matrix = [];
 d3.csv(
