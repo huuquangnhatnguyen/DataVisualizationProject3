@@ -465,8 +465,58 @@
       </div>
     </div>
     <hr />
+    <div
+      class="bar-chart-container"
+      style="display: grid; grid-template-columns: 6fr 6fr; gap: 20px"
+    >
+      <div class="description-container">
+        <h2 class="section-title" style="text-align: left">
+          Sheldon's Topics of Interest
+        </h2>
+        <div id="chord-description">
+          <p>
+            The Bar chart visualizes the topics of interest that Sheldon Cooper,
+            one of the main characters, frequently discusses. Each bar
+            represents a specific topic, and its length indicates the number of
+            times Sheldon mentions it throughout the series. This chart provides
+            insights into Sheldon's character and his intellectual pursuits,
+            showcasing the themes that resonate most with him.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div id="bar-chart"></div>
+        <div class="bubble-chart-controls">
+          <select
+            id="bar-season-select"
+            onchange="handleSeasonChangeBar(event)"
+          >
+            <option value="1">Season 1</option>
+            <option value="2">Season 2</option>
+            <option value="3">Season 3</option>
+            <option value="4">Season 4</option>
+            <option value="5">Season 5</option>
+            <option value="6">Season 6</option>
+            <option value="7">Season 7</option>
+            <option value="8">Season 8</option>
+            <option value="9">Season 9</option>
+            <option value="10">Season 10</option>
+          </select>
 
-    <div></div>
+          <select
+            id="bar-data-select"
+            onchange="handleCharacterChangeBar(event)"
+          >
+            <option value="Leonard">Leonard</option>
+            <option value="Penny">Penny</option>
+            <option value="Howard">Howard</option>
+            <option value="Raj">Raj</option>
+            <option value="Amy">Amy</option>
+            <option value="Bernadette">Bernadette</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- <div id="tree-map-chart" class="chart-container"></div> -->
 
@@ -478,6 +528,8 @@
     <script src="js/Chord.js"></script>
     <script src="js/BubbleChart.js"></script>
     <script src="js/BubbleChartMain.js"></script>
+    <script src="js/BarChart.js"></script>
+
     <script src="js/main.js"></script>
   </body>
 </html>
