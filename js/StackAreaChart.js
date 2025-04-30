@@ -239,43 +239,6 @@ class StackAreaChart {
         vis.tooltip.transition().duration(500).style("opacity", 0);
       });
 
-    // // Add episode indicator line that follows mouse
-    // vis.chartGroup
-    //   .append("line")
-    //   .attr("class", "mouse-line")
-    //   .style("stroke", "white")
-    //   .style("stroke-width", 1)
-    //   .style("opacity", 0)
-    //   .attr("x1", 0)
-    //   .attr("x2", 0)
-    //   .attr("y1", 0)
-    //   .attr("y2", vis.height);
-
-    // // Add mouse move event to chart area to highlight the closest episode line
-    // vis.chartGroup
-    //   .append("rect")
-    //   .attr("width", vis.width)
-    //   .attr("height", vis.height)
-    //   .style("fill", "none")
-    //   .style("pointer-events", "all")
-    //   .on("mousemove", function (event) {
-    //     const xPos = d3.pointer(event)[0];
-    //     const episodeIndex = Math.round(x.invert(xPos));
-
-    //     // Only highlight if within valid range
-    //     if (episodeIndex >= 1 && episodeIndex <= data.length) {
-    //       // Position the indicator line at the nearest episode
-    //       d3.select(".mouse-line")
-    //         .attr("x1", x(episodeIndex))
-    //         .attr("x2", x(episodeIndex))
-    //         .style("opacity", 1);
-    //     }
-    //   })
-    //   .on("mouseout", function () {
-    //     // Hide the line when mouse leaves chart area
-    //     d3.select(".mouse-line").style("opacity", 0);
-    //   });
-
     // Add legend
     this.addLegend(color);
   }

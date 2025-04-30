@@ -3,22 +3,8 @@
   <head>
     <title>TV shows</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/bubble-chart.css" />
-
-    <script src="js/d3.v6.min.js"></script>
-    <script src="js/d3-weighted-voronoi.js"></script>
-    <script src="js/d3-voronoi-map.js"></script>
-    
-    <script src="js/StackAreaChart.js"></script>
-    <script src="js/VoronoiMap.js"></script>
-    <script src="js/BubbleChart.js"></script>
-
-    <script src="js/main.js"></script>
-    <script src="js/BubbleChartMain.js"></script>
-    
-    
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,14 +16,14 @@
   <body>
     <div class="header">
       <div style="display: flex; align-content: center">
-        <h1>The Big Bang Theory</h1>
+        <h1 class="section-title">The Big Bang Theory</h1>
       </div>
     </div>
 
     <div style="display: grid; grid-template-columns: 6fr 6fr; gap: 20px">
       <div>
         <div>
-          <h2>Synopsis</h2>
+          <h2 class="section-title" style="text-align: left">Synopsis</h2>
         </div>
 
         <div>
@@ -55,7 +41,7 @@
       </div>
       <div>
         <div>
-          <h2>About the Show</h2>
+          <h2 class="section-title" style="text-align: left">About the Show</h2>
         </div>
         <div>
           <ul>
@@ -70,207 +56,73 @@
         </div>
       </div>
     </div>
-
-    <h2>Cast</h2>
-
+    <hr />
+    <!-- Overview chart -->
     <div
-      style="
-        display: grid;
-        grid-template-columns: 6fr 6fr;
-        justify-content: space-between;
-        gap: 20px;
-      "
+      class="overview-container container"
+      style="display: grid; grid-template-columns: 6fr 6fr"
     >
-      <div>
-        <div class="cast-tabs">
-          <button class="tablinks" onclick="openTab(event, 'Leonard')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Leonard.png"
-                alt="Leonard Hofstadter"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Leonard</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Sheldon')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Sheldon.png"
-                alt="Sheldon Cooper"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Sheldon</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Penny')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Penny.png"
-                alt="Penny"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Penny</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Howard')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Howard.png"
-                alt="Howard Wolowitz"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Howard</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Raj')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Raj.png"
-                alt="Rajesh Koothrappali"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Raj</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Amy')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Amy.png"
-                alt="Amy Farrah Fowler"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Amy</div>
-            </div>
-          </button>
-
-          <button class="tablinks" onclick="openTab(event, 'Bernadette')">
-            <div style="text-align: center">
-              <img
-                src="char_pictures/Bernadette.png"
-                alt="Bernadette Rostenkowski-Wolowitz"
-                width="75"
-                height="75"
-                style="border-radius: 50%"
-              />
-              <div>Bernadette</div>
-            </div>
-          </button>
-        </div>
-
-        <!-- Tab content -->
-        <div id="Leonard" class="tabcontent">
-          <h3>Leonard Hofstadter</h3>
-          <p>
-            Played by actor Johnny Galecki, Leonard is an experimental physicist
-            with an IQ of 173 who works at Caltech. Originally from New Jersey,
-            he is more socially adept than his friends and often serves as the
-            group's mediator. Leonard shares an apartment with Sheldon for much
-            of the series. He has a complicated relationship with his
-            accomplished family and eventually marries Penny, with whom he
-            starts a family by the series finale.
-          </p>
-        </div>
-
-        <div id="Sheldon" class="tabcontent">
-          <h3>Sheldon Cooper</h3>
-          <p>
-            Played by actor Jim Parsons, Sheldon is a theoretical physicist from
-            Texas, renowned for his intellect (IQ 187) and eidetic memory. He
-            began college at 11 and earned his PhD at 16. Sheldon is known for
-            his rigid routines, social awkwardness, and lack of empathy, but he
-            does care deeply for his friends. He specializes in string theory
-            and later wins a Nobel Prize with Amy. Sheldon’s quirks and literal
-            interpretations of the world are central to the show’s humor.
-          </p>
-        </div>
-
-        <div id="Penny" class="tabcontent">
-          <h3>Penny</h3>
-          <p>
-            Played by actress Kaley Cuoco, Penny is an aspiring actress from
-            Omaha, Nebraska, who moves in across the hall from Leonard and
-            Sheldon. Initially working as a waitress at The Cheesecake Factory,
-            she later becomes a successful pharmaceutical sales representative.
-            Penny is street-smart, friendly, and forms close bonds with
-            Bernadette and Amy. Her on-and-off relationship with Leonard is a
-            major storyline, culminating in their marriage.
-          </p>
-        </div>
-
-        <div id="Howard" class="tabcontent">
-          <h3>Howard Wolowitz</h3>
-          <p>
-            Played by actor Simon Helberg, Howard is an aerospace engineer with
-            a master's degree from MIT. He is Jewish and lives with his
-            overbearing mother until he marries Bernadette. Unlike his friends,
-            he does not have a doctorate. Howard is known for his flirtatious
-            nature, love of gadgets, and eventually becomes an astronaut,
-            traveling to the International Space Station.
-          </p>
-        </div>
-
-        <div id="Raj" class="tabcontent">
-          <h3>Rajesh Koothrappali</h3>
-          <p>
-            Played by actor Kunal Nayyar, Raj is an astrophysicist from India
-            who works at Caltech. He initially cannot speak to women unless
-            intoxicated, a condition that provides much comic relief. Raj is
-            sensitive, romantic, and often struggles with loneliness and his
-            parents’ expectations. He is close friends with Howard.
-          </p>
-        </div>
-
-        <div id="Amy" class="tabcontent">
-          <h3>Amy Farrah Fowler</h3>
-          <p>
-            Played by actress Mayim Bialik, Amy is a neurobiologist introduced
-            as a potential romantic partner for Sheldon. Initially socially
-            awkward, she gradually becomes an integral part of the group and
-            forms strong friendships with Penny and Bernadette. Amy’s
-            relationship with Sheldon is central to her character, and together
-            they win a Nobel Prize in Physics.
-          </p>
-        </div>
-
-        <div id="Bernadette" class="tabcontent">
-          <h3>Bernadette Rostenkowski-Wolowitz</h3>
-          <p>
-            Played by actress Melissa Rauch, Bernadette starts as a waitress
-            alongside Penny but earns a PhD in microbiology and lands a
-            high-paying job in pharmaceuticals. She is married to Howard and is
-            known for her small stature, high-pitched voice, and assertive
-            personality.
-          </p>
-        </div>
+      <div class="description-container">
+        <h2 class="section-title" style="text-align: left">About our data</h2>
+        <p class="voronoi-description">
+          Our data is scraped from the website bigbangtrans.wordpress.com. It
+          features transcripts for every episodes in BBT up to season 9 of the
+          series. There are about 134 characters appearing in 9 seasons, and
+          about 52799 dialougues happens between them.
+        </p>
       </div>
 
-      <!-- Map container -->
-
-      <!-- <h1>Project 3: TV shows</h1> -->
-      <div id="area-chart-container">
+      <div class="voronoi-chart-container">
         <div
-          class="buttons-container"
-          style="margin: 20px 0 20px 0; height: fit-content"
-          display="flex"
+          style="margin: 20px 0 20px 0; height: fit-content; text-align: center"
         >
+          <button
+            id="Seasonal"
+            class="view-mode-button"
+            value="Seasonal"
+            onclick="toggleDisplayingModeVoronoi(event)"
+          >
+            Whole Show
+          </button>
+
+          <button
+            id="Episodes"
+            class="view-mode-button"
+            value="Episodes"
+            onclick="toggleDisplayingModeVoronoi(event)"
+          >
+            Seasonal
+          </button>
+
+          <select
+            name="season-selector"
+            id="season-select-voronoi"
+            onchange="handleSeasonChangeVoronoi(event)"
+            style="display: none"
+          >
+            <option value="0">Select a season</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div id="visualization-container">
+          <svg id="visualization"></svg>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- Main Casts -->
+    <div style="display: grid; grid-template-columns: 6fr 6fr; gap: 20px">
+      <div class="stacked-area-chart-container">
+        <div style="margin: 20px 0 20px 0; height: fit-content" display="flex">
           <button
             id="Seasonal"
             class="view-mode-button"
@@ -310,86 +162,322 @@
         </div>
         <div id="stacked-area-chart" class="chart-container"></div>
       </div>
-    </div>
-    <div>
-      <div
-        class="buttons-container"
-        style="margin: 20px 0 20px 0; height: fit-content"
-        display="flex"
-      >
-        <button
-          id="Seasonal"
-          class="view-mode-button"
-          value="Seasonal"
-          onclick="toggleDisplayingModeVoronoi(event)"
-        >
-          Whole Show
-        </button>
+      <div class="description-container">
+        <h2 class="section-title" style="text-align: left">Main Cast</h2>
 
-        <button
-          id="Episodes"
-          class="view-mode-button"
-          value="Episodes"
-          onclick="toggleDisplayingModeVoronoi(event)"
-        >
-          Seasonal
-        </button>
+        <div style="display: block">
+          <div>
+            <div class="cast-tabs">
+              <button
+                class="tablinks"
+                onclick="openTab(event, 'Leonard')"
+                id="defaultOpen"
+              >
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Leonard.png"
+                    alt="Leonard Hofstadter"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Leonard</div>
+                </div>
+              </button>
 
-        <select
-          name="season-select-voronoi"
-          id="season-select-voronoi"
-          onchange="handleSeasonChangeVoronoi(event)"
-          style="display: none"
-        >
-          <option value="0">Select a season</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-      <div id="visualization-container">
-        <svg id="visualization"></svg>
+              <button class="tablinks" onclick="openTab(event, 'Sheldon')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Sheldon.png"
+                    alt="Sheldon Cooper"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Sheldon</div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openTab(event, 'Penny')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Penny.png"
+                    alt="Penny"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Penny</div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openTab(event, 'Howard')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Howard.png"
+                    alt="Howard Wolowitz"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Howard</div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openTab(event, 'Raj')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Raj.png"
+                    alt="Rajesh Koothrappali"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Raj</div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openTab(event, 'Amy')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Amy.png"
+                    alt="Amy Farrah Fowler"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Amy</div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openTab(event, 'Bernadette')">
+                <div style="text-align: center">
+                  <img
+                    src="char_pictures/Bernadette.png"
+                    alt="Bernadette Rostenkowski-Wolowitz"
+                    width="75"
+                    height="75"
+                    style="border-radius: 50%"
+                  />
+                  <div>Bernadette</div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="Leonard" class="tabcontent">
+              <h3>Leonard Hofstadter</h3>
+              <p>
+                Played by actor Johnny Galecki, Leonard is an experimental
+                physicist with an IQ of 173 who works at Caltech. Originally
+                from New Jersey, he is more socially adept than his friends and
+                often serves as the group's mediator. Leonard shares an
+                apartment with Sheldon for much of the series. He has a
+                complicated relationship with his accomplished family and
+                eventually marries Penny, with whom he starts a family by the
+                series finale.
+              </p>
+            </div>
+
+            <div id="Sheldon" class="tabcontent">
+              <h3>Sheldon Cooper</h3>
+              <p>
+                Played by actor Jim Parsons, Sheldon is a theoretical physicist
+                from Texas, renowned for his intellect (IQ 187) and eidetic
+                memory. He began college at 11 and earned his PhD at 16. Sheldon
+                is known for his rigid routines, social awkwardness, and lack of
+                empathy, but he does care deeply for his friends. He specializes
+                in string theory and later wins a Nobel Prize with Amy.
+                Sheldon’s quirks and literal interpretations of the world are
+                central to the show’s humor.
+              </p>
+            </div>
+
+            <div id="Penny" class="tabcontent">
+              <h3>Penny</h3>
+              <p>
+                Played by actress Kaley Cuoco, Penny is an aspiring actress from
+                Omaha, Nebraska, who moves in across the hall from Leonard and
+                Sheldon. Initially working as a waitress at The Cheesecake
+                Factory, she later becomes a successful pharmaceutical sales
+                representative. Penny is street-smart, friendly, and forms close
+                bonds with Bernadette and Amy. Her on-and-off relationship with
+                Leonard is a major storyline, culminating in their marriage.
+              </p>
+            </div>
+
+            <div id="Howard" class="tabcontent">
+              <h3>Howard Wolowitz</h3>
+              <p>
+                Played by actor Simon Helberg, Howard is an aerospace engineer
+                with a master's degree from MIT. He is Jewish and lives with his
+                overbearing mother until he marries Bernadette. Unlike his
+                friends, he does not have a doctorate. Howard is known for his
+                flirtatious nature, love of gadgets, and eventually becomes an
+                astronaut, traveling to the International Space Station.
+              </p>
+            </div>
+
+            <div id="Raj" class="tabcontent">
+              <h3>Rajesh Koothrappali</h3>
+              <p>
+                Played by actor Kunal Nayyar, Raj is an astrophysicist from
+                India who works at Caltech. He initially cannot speak to women
+                unless intoxicated, a condition that provides much comic relief.
+                Raj is sensitive, romantic, and often struggles with loneliness
+                and his parents’ expectations. He is close friends with Howard.
+              </p>
+            </div>
+
+            <div id="Amy" class="tabcontent">
+              <h3>Amy Farrah Fowler</h3>
+              <p>
+                Played by actress Mayim Bialik, Amy is a neurobiologist
+                introduced as a potential romantic partner for Sheldon.
+                Initially socially awkward, she gradually becomes an integral
+                part of the group and forms strong friendships with Penny and
+                Bernadette. Amy’s relationship with Sheldon is central to her
+                character, and together they win a Nobel Prize in Physics.
+              </p>
+            </div>
+
+            <div id="Bernadette" class="tabcontent">
+              <h3>Bernadette Rostenkowski-Wolowitz</h3>
+              <p>
+                Played by actress Melissa Rauch, Bernadette starts as a waitress
+                alongside Penny but earns a PhD in microbiology and lands a
+                high-paying job in pharmaceuticals. She is married to Howard and
+                is known for her small stature, high-pitched voice, and
+                assertive personality.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <hr />
+    <!-- BubbleChart section -->
+    <div
+      class="bubble-chart-container"
+      style="display: grid; grid-template-columns: 6fr 6fr; gap: 20px"
+    >
+      <div class="description-container">
+        <h2 class="section-title" style="text-align: left">
+          Unique Words of the Main Characters
+        </h2>
+        <p class="bubble-description">
+          The Bubble chart visualizes the unique words spoken by each character
+          throughout the series. For the unique words analysis, we used the NLTK
+          and scikit-learn toolkits to process all dialogues spoken by each main
+          character. We concatenated their lines into large text blocks, then
+          lemmatized and tokenized the words using appropriate language models.
+          Leveraging a Bag-of-Words representation combined with a
+          TF-IDF–inspired scoring method, we calculated the uniqueness of each
+          word. Finally, we identified and presented the 10 most distinctive
+          words that characterize each main cast member—both within individual
+          seasons and across the entire series.
+        </p>
+      </div>
+
+      <div>
+        <section class="bubble-chart-section">
+          <!-- Bubble chart will be rendered here by D3 -->
+        </section>
+        <div class="bubble-chart-controls">
+          <select id="word-data-select" onchange="handleWordDataChange(event)">
+            <option value="season">By Season</option>
+            <option value="show">Whole Show</option>
+          </select>
+
+          <select
+            id="bubble-season-select"
+            onchange="handleBubbleSeasonChange(event)"
+          >
+            <option value="0">All Seasons</option>
+            <option value="1">Season 1</option>
+            <option value="2">Season 2</option>
+            <option value="3">Season 3</option>
+            <option value="4">Season 4</option>
+            <option value="5">Season 5</option>
+            <option value="6">Season 6</option>
+            <option value="7">Season 7</option>
+            <option value="8">Season 8</option>
+            <option value="9">Season 9</option>
+            <option value="10">Season 10</option>
+          </select>
+        </div>
+        <div class="bubble-legend">
+          <!-- Legend will be dynamically generated by script -->
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div
+      class="chord-chart-container"
+      style="display: grid; grid-template-columns: 6fr 6fr; gap: 20px"
+    >
+      <div>
+        <div id="chord-chart"></div>
+        <div class="bubble-chart-controls">
+          <select
+            id="chord-data-select"
+            onchange="handleViewModeChangeChord(event)"
+          >
+            <option value="show">Whole Show</option>
+            <option value="season">By Season</option>
+          </select>
+
+          <select
+            id="chord-season-select"
+            onchange="handleBubbleSeasonChange(event)"
+            disabled
+          >
+            <option value="0">All Seasons</option>
+            <option value="1">Season 1</option>
+            <option value="2">Season 2</option>
+            <option value="3">Season 3</option>
+            <option value="4">Season 4</option>
+            <option value="5">Season 5</option>
+            <option value="6">Season 6</option>
+            <option value="7">Season 7</option>
+            <option value="8">Season 8</option>
+            <option value="9">Season 9</option>
+            <option value="10">Season 10</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="description-container">
+        <h2 class="section-title" style="text-align: left">
+          Character Interactions
+        </h2>
+        <div id="chord-description">
+          <p>
+            The Chord diagram visualizes the interactions between characters in
+            the show. Each character is represented by a colored arc, and the
+            connections between them indicate the frequency of their dialogues.
+            The thickness of the lines represents the strength of their
+            interactions, providing insights into the dynamics of their
+            relationships throughout the series.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div></div>
 
     <!-- <div id="tree-map-chart" class="chart-container"></div> -->
 
-    <!-- BubbleChart section -->
-        <h2 class="section-title">Unique Words of the Main Characters</h2>
-    <section class="bubble-chart-section">
-      <!-- Bubble chart will be rendered here by D3 -->
-    </section>
-    <div class="bubble-chart-controls">
-      <select id="word-data-select" onchange="handleWordDataChange(event)">
-        <option value="season">By Season</option>
-        <option value="show">Whole Show</option>
-      </select>
-      
-      <select id="bubble-season-select" onchange="handleBubbleSeasonChange(event)">
-        <option value="0">All Seasons</option>
-        <option value="1">Season 1</option>
-        <option value="2">Season 2</option>
-        <option value="3">Season 3</option>
-        <option value="4">Season 4</option>
-        <option value="5">Season 5</option>
-        <option value="6">Season 6</option>
-        <option value="7">Season 7</option>
-        <option value="8">Season 8</option>
-        <option value="9">Season 9</option>
-        <option value="10">Season 10</option>
-      </select>
-    </div>
-    <div class="bubble-legend">
-      <!-- Legend will be dynamically generated by script -->
-  </div>
-
-
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/d3-weighted-voronoi.js"></script>
+    <script src="js/d3-voronoi-map.js"></script>
+    <script src="js/StackAreaChart.js"></script>
+    <script src="js/VoronoiMap.js"></script>
+    <script src="js/Chord.js"></script>
+    <script src="js/BubbleChart.js"></script>
+    <script src="js/BubbleChartMain.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
