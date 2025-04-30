@@ -120,7 +120,7 @@ This chart will effectively show the main cast's relationship with each other, w
 The entirety of our code can be found right here in this repo (https://github.com/huuquangnhatnguyen/DataVisualizationProject3)
 
 ## Demo Video
-
+https://youtu.be/-hE2pWrIHNU?si=1xt2JKjG2DxfBNxk
 
 ### Work Distribution
 We split up the work like so: each person handles a little bit of each level, trying to find things that will help each other progress and slowly get to level 4.
