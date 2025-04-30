@@ -127,10 +127,6 @@ html {
   justify-content: center;
 }
 
-#visualization {
-  /* background-color: rgb(250, 250, 250); */
-  /* border: 1px solid #eee; */
-}
 
 .symbol {
   fill: none;
@@ -179,3 +175,4 @@ html {
   font-size: x-large;
   margin: 0;
 }
+
