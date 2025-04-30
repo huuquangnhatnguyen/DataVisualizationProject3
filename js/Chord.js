@@ -58,14 +58,13 @@ class ChordChart {
       .scaleOrdinal()
       .domain(d3.range(vis.labels.length))
       .range([
-        "#e41a1c",
-        "#377eb8",
-        "#4daf4a",
-        "#984ea3",
-        "#ff7f00",
-        "#ffff33",
-        "#a65628",
-        "#f781bf",
+        "#FF6B6B",
+        "#4DABF7",
+        "#69DB7C",
+        "#B197FC",
+        "#FFA94D",
+        "#FFD43B",
+        "#38D9A9",
       ]);
 
     // Create a matrix
@@ -277,6 +276,8 @@ class ChordChart {
     this.svg.selectAll("*").remove();
     d3.select(this.config.parentElement).select("div.tooltip").remove();
     d3.select(this.config.parentElement).select("svg.legend").remove();
+    d3.select(this.config.parentElement).select("svg").remove();
+    d3.select(this.config.parentElement).select("g").remove();
 
     // Re-initialize and update the visualization
     this.initVis();

@@ -133,8 +133,7 @@ class VoronoiMap {
     this.container
       .select(".total-cost")
       .attr("fill", "var(--text-color)")
-      .attr("margin-bottom", "5px")
-      .text(`${this.totalCost} lines in total`); // title of the chart
+      .text(`${this.totalCost} dialogues in total`); // title of the chart
 
     // Create or update legends
     this.updateLegends(this.data);
@@ -259,7 +258,7 @@ class VoronoiMap {
     this.container
       .append("text")
       .classed("total-cost", true)
-      .attr("transform", `rotate(0)translate(0,${-this.radius - 6})`)
+      .attr("transform", `rotate(0)translate(0,${-this.radius - 20})`)
       .text("0"); // Will be updated with real value later
 
     // Create groups for cells, costs, and highlighters
@@ -317,43 +316,43 @@ class VoronoiMap {
       this.mainCharacters.includes(d.composition)
     );
     reversedData.push({
-      character: "> 1000 lines",
+      character: "> 1000 dialogues",
       color: "#FF85A2",
-      composition: "> 1000 lines",
+      composition: "> 1000 dialogues",
       cost: 1000,
       id: 8,
       lines: "1000",
     });
     reversedData.push({
-      character: "> 100 lines",
+      character: "> 100 dialogues",
       color: "#FFF3BF",
-      composition: "> 100 lines",
+      composition: "> 100 dialogues",
       cost: 100,
-      id: 8,
+      id: 9,
       lines: "100",
     });
     reversedData.push({
-      character: "> 50 lines",
+      character: "> 50 dialogues",
       color: "#D3F9D8",
-      composition: "> 50 lines",
+      composition: "> 50 dialogues",
       cost: 50,
-      id: 8,
+      id: 10,
       lines: "50",
     });
     reversedData.push({
-      character: "> 10 lines",
+      character: "> 10 dialogues",
       color: "#D0EBFF",
-      composition: "> 10 lines",
+      composition: "> 10 dialogues",
       cost: 1000,
-      id: 8,
+      id: 11,
       lines: "10",
     });
     reversedData.push({
-      character: "< 10 lines",
+      character: "< 10 dialogues",
       color: "#FFE3E3",
-      composition: "< 10 lines",
+      composition: "< 10 dialogues",
       cost: 1000,
-      id: 8,
+      id: 12,
       lines: "0",
     });
     reversedData.reverse();
@@ -476,7 +475,7 @@ class VoronoiMap {
             .style("left", event.pageX + "px")
             .style("top", event.pageY - 28 + "px")
             .html(
-              `<div ><strong style="color: var(--background-color)">Character:</strong> <span style="color: ${d.site.originalObject.data.originalData.color}">${d.site.originalObject.data.originalData.composition}</span></div><div<strong style="color: var(--background-color)">Lines:</strong> ${d.site.originalObject.data.originalData.cost}</div>`
+              `<div ><strong style="color: var(--background-color)">Character:</strong> <span style="color: ${d.site.originalObject.data.originalData.color}">${d.site.originalObject.data.originalData.composition}</span></div><div<strong style="color: var(--background-color)">Number of dialogues:</strong> ${d.site.originalObject.data.originalData.cost}</div>`
             )
             .style("left", event.pageX + "px")
             .style("top", event.pageY - 28 + "px");

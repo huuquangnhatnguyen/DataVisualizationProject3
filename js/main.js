@@ -76,6 +76,13 @@ function openTab(evt, charName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(charName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  const layerName = charName.replace("tab-", "").toLowerCase();
+  d3.selectAll(".layer").style("opacity", 0.6).style("stroke", "none");
+  d3.selectAll(`.${layerName}`)
+    .style("opacity", 1)
+    .style("stroke", "#000")
+    .style("stroke-width", 1);
 }
 
 function toggleDisplayingMode(event) {
@@ -183,6 +190,7 @@ function handleSeasonChangeVoronoi(event) {
 }
 
 let matrix = [];
+let chordChart;
 d3.csv(
   "data/character_interactions/main_character_interactions_all_seasons.csv"
 ).then((data) => {
@@ -196,13 +204,70 @@ d3.csv(
       matrix[j][i] = +d.count;
     }
   });
-  console.log(matrix);
-  const testChord = new ChordChart(testConfig, matrix, mainCharacters);
+  chordChart = new ChordChart(chordConfig, matrix, mainCharacters);
 });
 
-const testConfig = {
+const chordConfig = {
   parentElement: "#chord-chart",
   containerWidth: 700,
   containerHeight: 700,
   margin: { top: 50, right: 150, bottom: 50, left: 50 },
 };
+
+let chordMode = "Seasonal"; // default mode for Chord chart
+let selectedSeasonChord = 1; // default season for Chord chart
+let filePathChord = `data/character_interactions/main_character_interactions_all_seasons.csv`;
+function handleViewModeChangeChord(event) {
+  let chordMode = event.target.value;
+  if (chordMode == "show") {
+    filePathChord = `data/character_interactions/main_character_interactions_all_seasons.csv`;
+    d3.csv(filePathChord).then((data) => {
+      matrix = Array(mainCharacters.length)
+        .fill()
+        .map((d) => Array(mainCharacters.length).fill(0));
+      data.forEach((d) => {
+        let i = mainCharacters.indexOf(d.from);
+        let j = mainCharacters.indexOf(d.to);
+        if (i >= 0 && j >= 0) {
+          matrix[j][i] = +d.count;
+        }
+      });
+      chordChart.updateData(matrix, mainCharacters);
+      document.getElementById("chord-season-select").disabled = true;
+    });
+  }
+  if (chordMode == "season") {
+    filePathChord = `data/character_interactions/main_character_interactions_season_0${selectedSeasonChord}.csv`;
+    d3.csv(filePathChord).then((data) => {
+      matrix = Array(mainCharacters.length)
+        .fill()
+        .map((d) => Array(mainCharacters.length).fill(0));
+      data.forEach((d) => {
+        let i = mainCharacters.indexOf(d.from);
+        let j = mainCharacters.indexOf(d.to);
+        if (i >= 0 && j >= 0) {
+          matrix[j][i] = +d.count;
+        }
+      });
+      chordChart.updateData(matrix, mainCharacters);
+      document.getElementById("chord-season-select").disabled = false;
+    });
+  }
+}
+function handleSeasonChangeChord(event) {
+  selectedSeasonChord = Number(event.target.value);
+  filePathChord = `data/character_interactions/main_character_interactions_season_0${selectedSeasonChord}.csv`;
+  d3.csv(filePathChord).then((data) => {
+    matrix = Array(mainCharacters.length)
+      .fill()
+      .map((d) => Array(mainCharacters.length).fill(0));
+    data.forEach((d) => {
+      let i = mainCharacters.indexOf(d.from);
+      let j = mainCharacters.indexOf(d.to);
+      if (i >= 0 && j >= 0) {
+        matrix[j][i] = +d.count;
+      }
+    });
+    chordChart.updateData(matrix, mainCharacters);
+  });
+}
