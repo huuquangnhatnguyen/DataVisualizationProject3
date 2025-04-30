@@ -372,7 +372,7 @@ class VoronoiMap {
 
     legend
       .append("rect")
-      .classed("legend-color", true)
+      .classed("legend-color-stacked", true)
       .attr("filter", "url(#inset-shadow)")
       .attr("y", -legendHeight)
       .attr("width", colorWidth)
