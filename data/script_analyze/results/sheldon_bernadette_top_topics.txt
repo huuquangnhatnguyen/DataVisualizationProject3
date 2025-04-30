@@ -1,0 +1,6 @@
+Topic 0: 0_bernadette_just_amy_feel
+Key terms: bernadette (0.024), just (0.022), amy (0.019), feel (0.017), leonard (0.017), yeah (0.017), going (0.017), howard (0.016), good (0.016), yes (0.016)
+
+Topic 1: 1_toast_look world_ll kick_penicillin uh
+Key terms: toast (0.197), look world (0.048), ll kick (0.048), penicillin uh (0.048), friendly (0.048), friendly festival (0.048), oh fun (0.048), notch explore (0.048), notch (0.048), model trains (0.048)
+

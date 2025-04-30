@@ -1,0 +1,321 @@
+Topic 0: 0_science_physics_mommy_biology
+Key terms: science (0.055), physics (0.043), mommy (0.032), biology (0.031), matters (0.031), american (0.030), tickle (0.024), body (0.023), paper (0.022), discovery (0.021)
+
+Topic 1: 1_kissing_nose_kiss_teeth
+Key terms: kissing (0.042), nose (0.038), kiss (0.033), teeth (0.029), pants (0.028), toothbrush (0.027), aw (0.026), turn (0.023), face (0.022), putting (0.021)
+
+Topic 2: 2_amy_farrah fowler_farrah_amy farrah
+Key terms: amy (0.088), farrah fowler (0.040), farrah (0.039), amy farrah (0.039), fowler (0.036), great deal (0.033), amy just (0.032), deal (0.030), break (0.028), say amy (0.028)
+
+Topic 3: 3_penny_sick_places_thousand
+Key terms: penny (0.129), sick (0.033), places (0.032), thousand (0.032), quarter (0.032), trust (0.030), pretty good (0.023), triple (0.023), official (0.023), think got (0.023)
+
+Topic 4: 4_flag_flags_fun flags_fun
+Key terms: flag (0.117), flags (0.110), fun flags (0.059), fun (0.052), white (0.042), episode (0.035), animal (0.030), hosting (0.030), em (0.030), vexillology (0.029)
+
+Topic 5: 5_relationship_mystery_living_years
+Key terms: relationship (0.096), mystery (0.058), living (0.048), years (0.045), fast (0.043), agree (0.037), faster (0.035), believe (0.031), didn hold (0.028), know apartment (0.028)
+
+Topic 6: 6_leonard_bars_play_car
+Key terms: leonard (0.106), bars (0.028), play (0.026), car (0.025), lunch (0.025), kid (0.023), terrible (0.023), oh ve (0.022), notion (0.022), french (0.022)
+
+Topic 7: 7_sheldon_cooper_dr_presents
+Key terms: sheldon (0.168), cooper (0.160), dr (0.086), presents (0.055), hello (0.043), fun flags (0.041), welcome (0.040), episode (0.037), lab (0.036), fun (0.035)
+
+Topic 8: 8_excuse_rude_familiar_think little
+Key terms: excuse (0.221), rude (0.171), familiar (0.171), think little (0.107), strongly (0.100), impossible (0.100), did (0.095), need know (0.094), truth (0.089), disagree (0.085)
+
+Topic 9: 9_fine_okay_sorry_okay talk
+Key terms: fine (0.179), okay (0.109), sorry (0.075), okay talk (0.065), fine ll (0.065), ll right (0.065), talk (0.064), fine sorry (0.061), fine okay (0.061), oh sorry (0.061)
+
+Topic 10: 10_house_peanut butter_comic_butter
+Key terms: house (0.049), peanut butter (0.043), comic (0.043), butter (0.043), stuart (0.042), peanut (0.041), lost (0.034), childhood (0.031), raiders (0.031), discussing (0.030)
+
+Topic 11: 11_guy_laptop_best_buy
+Key terms: guy (0.054), laptop (0.054), best (0.052), buy (0.052), best buy (0.046), yeah (0.036), using (0.032), player (0.026), blu ray (0.026), furthermore (0.026)
+
+Topic 12: 12_excellent_screw_classic_luck
+Key terms: excellent (0.133), screw (0.084), classic (0.084), luck (0.084), good luck (0.084), worst (0.078), board (0.078), begin (0.073), related (0.073), oh boy (0.073)
+
+Topic 13: 13_trains_railway_train_nostril
+Key terms: trains (0.069), railway (0.066), train (0.061), nostril (0.058), music (0.055), eyes (0.048), gonna (0.041), gets (0.035), know gonna (0.035), know difficult (0.035)
+
+Topic 14: 14_birthday_balloon_wizarding world_wizarding
+Key terms: birthday (0.193), balloon (0.056), wizarding world (0.053), wizarding (0.053), girl (0.048), pick (0.042), surprise (0.038), 13 (0.032), didn like (0.032), late got (0.032)
+
+Topic 15: 15_learned_game_finally_bad
+Key terms: learned (0.059), game (0.057), finally (0.048), bad (0.045), better (0.044), thing ve (0.041), suggesting (0.041), just thought (0.041), getting better (0.039), months (0.039)
+
+Topic 16: 16_table_dinner_square_breakfast
+Key terms: table (0.140), dinner (0.076), square (0.075), breakfast (0.063), shall (0.059), tickets (0.059), food (0.053), check (0.050), eat (0.049), bed breakfast (0.045)
+
+Topic 17: 17_step_point_english_oh wait
+Key terms: step (0.255), point (0.191), english (0.163), oh wait (0.150), hate (0.150), realize (0.128), big (0.116), speaking (0.116), wouldn wouldn (0.108), saying (0.101)
+
+Topic 18: 18_stronger_way_father_yes yeah
+Key terms: stronger (0.054), way (0.048), father (0.042), yes yeah (0.039), man know (0.039), good point (0.039), use right (0.039), harder (0.039), funny (0.038), clause (0.036)
+
+Topic 19: 19_beverage_drink_offer_know don
+Key terms: beverage (0.204), drink (0.129), offer (0.118), know don (0.074), hat (0.064), candle (0.054), soldier (0.050), fail (0.050), wearing (0.050), guest (0.047)
+
+Topic 20: 20_dare_like like_yes like_eh
+Key terms: dare (0.832), like like (0.492), yes like (0.372), eh (0.372), like (0.112), yes (0.100), oh (0.040),  (0.000),  (0.000),  (0.000)
+
+Topic 21: 21_gift_treasure_don like_gave
+Key terms: gift (0.131), treasure (0.062), don like (0.050), gave (0.047), holiday (0.046), thoughtful (0.046), hope (0.037), ve thinking (0.035), happy (0.034), impossible (0.033)
+
+Topic 22: 22_eat_food_meal_oh won
+Key terms: eat (0.109), food (0.092), meal (0.056), oh won (0.045), eats (0.045), trash (0.045), figured (0.045), job (0.045), event (0.042), eating (0.042)
+
+Topic 23: 23_texas_cheer_social_tricky
+Key terms: texas (0.169), cheer (0.099), social (0.073), tricky (0.071), ll tell (0.071), sweat (0.066), unhygienic (0.066), entertainment (0.066), eastern (0.066), available (0.066)
+
+Topic 24: 24_brain_attempting_experiment_particles
+Key terms: brain (0.081), attempting (0.071), experiment (0.061), particles (0.060), work (0.053), hint (0.051), house (0.045), admittedly (0.043), normally (0.043), ll know (0.043)
+
+Topic 25: 25_hello_knock_hey_did hello
+Key terms: hello (0.877), knock (0.186), hey (0.161), did hello (0.123), expect (0.112), evening (0.080), great (0.048), right (0.037), didn (0.032), did (0.028)
+
+Topic 26: 26_really_course_true_think really
+Key terms: really (0.241), course (0.234), true (0.176), think really (0.175), yes think (0.163), super (0.163), smart (0.121), think (0.115), probably (0.111), think think (0.096)
+
+Topic 27: 27_thank thank_thank_thank oh_oh thank
+Key terms: thank thank (0.742), thank (0.508), thank oh (0.155), oh thank (0.155), congratulations (0.155), glad (0.107), wonderful (0.101), thanks (0.057), oh (0.014),  (0.000)
+
+Topic 28: 28_yes yes_yes_exactly_yeah yeah
+Key terms: yes yes (0.606), yes (0.307), exactly (0.271), yeah yeah (0.196), page (0.091), yeah (0.083), right right (0.066), told (0.055), right (0.049),  (0.000)
+
+Topic 29: 29_penny_leonard_leonard penny_given
+Key terms: penny (0.091), leonard (0.081), leonard penny (0.048), given (0.033), live (0.032), heads (0.027), just leonard (0.027), buddy (0.027), knows (0.027), voyage (0.027)
+
+Topic 30: 30_subject_trying manipulate_changing_function
+Key terms: subject (0.186), trying manipulate (0.089), changing (0.089), function (0.089), wait (0.087), manipulate (0.083), topics (0.083), safe (0.083), wait know (0.083), trying (0.083)
+
+Topic 31: 31_welcome_body language_acting_voice
+Key terms: welcome (0.097), body language (0.080), acting (0.077), voice (0.077), language (0.074), body (0.056), just like (0.048), tall (0.048), don worry (0.048), drown (0.048)
+
+Topic 32: 32_invited_friends_excited_ve mentioned
+Key terms: invited (0.167), friends (0.124), excited (0.061), ve mentioned (0.058), everybody (0.058), invite (0.058), attached (0.058), oh sorry (0.058), years (0.057), yeah oh (0.055)
+
+Topic 33: 33_mars_planet_power_earth
+Key terms: mars (0.202), planet (0.112), power (0.078), earth (0.050), italian (0.047), plant (0.047), flags uh (0.047), humans (0.047), export (0.047), wouldn (0.046)
+
+Topic 34: 34_attitude_helpful_yeah okay_sure
+Key terms: attitude (0.288), helpful (0.267), yeah okay (0.239), sure (0.171), granted (0.158), quite (0.126), support (0.120), oh wait (0.110), rest (0.110), things (0.109)
+
+Topic 35: 35_angry_upset_sport_stupid
+Key terms: angry (0.135), upset (0.098), sport (0.091), stupid (0.083), mad (0.077), emotional (0.065), person (0.056), strong (0.054), gold (0.051), complain (0.051)
+
+Topic 36: 36_raj_poppycock_moving_people just
+Key terms: raj (0.219), poppycock (0.098), moving (0.073), people just (0.059), replaced (0.059), old room (0.055), named (0.055), wore (0.055), prepared (0.055), teaching (0.055)
+
+Topic 37: 37_right right_right_understanding_right ll
+Key terms: right right (0.641), right (0.287), understanding (0.178), right ll (0.160), try (0.121), set (0.116), ready (0.089), question (0.059), thank (0.057), ll (0.046)
+
+Topic 38: 38_bert_koothrappali_mrs_downstairs
+Key terms: bert (0.175), koothrappali (0.175), mrs (0.081), downstairs (0.081), geology (0.077), asteroid (0.073), hope happy (0.061), lab (0.058), stuart (0.058), eyed (0.057)
+
+Topic 39: 39_actually_answering_easier_actually yes
+Key terms: actually (0.210), answering (0.132), easier (0.132), actually yes (0.123), believe (0.116), short (0.116), video (0.097), application (0.094), question (0.081), girl (0.080)
+
+Topic 40: 40_apartment_want don_complain_single
+Key terms: apartment (0.291), want don (0.087), complain (0.081), single (0.076), environment (0.076), hungry (0.072), place (0.070), hate (0.066), application (0.062), know like (0.062)
+
+Topic 41: 41_step_action_waste time_repeat
+Key terms: step (0.065), action (0.059), waste time (0.053), repeat (0.053), waste (0.048), amy (0.047), grief (0.044), feelings (0.040), broken (0.040), head (0.036)
+
+Topic 42: 42_hair_list_pet_rate
+Key terms: hair (0.141), list (0.083), pet (0.076), rate (0.061), terrified (0.061), things make (0.061), running time (0.061), hot dog (0.061), wearing (0.061), don start (0.061)
+
+Topic 43: 43_careful_want come_suit_girlfriend
+Key terms: careful (0.124), want come (0.115), suit (0.109), girlfriend (0.095), know ve (0.091), check (0.091), friend (0.091), glad (0.085), wants (0.083), want say (0.068)
+
+Topic 44: 44_defend_want hear_right tried_lose
+Key terms: defend (0.146), want hear (0.146), right tried (0.146), lose (0.136), lecture (0.128), really don (0.128), don want (0.107), tried (0.104), leave (0.101), let let (0.080)
+
+Topic 45: 45_spongebob_fight_hagfish_eat
+Key terms: spongebob (0.091), fight (0.067), hagfish (0.061), eat (0.059), ll (0.057), fish (0.052), let pull (0.044), juicy (0.044), dry (0.044), marine (0.041)
+
+Topic 46: 46_conference_goodness_let look_lines
+Key terms: conference (0.133), goodness (0.076), let look (0.076), lines (0.076), look oh (0.076), wonderful (0.074), fail (0.071), smell (0.060), sexual (0.060), boy (0.058)
+
+Topic 47: 47_girlfriend_upset_expect_good thing
+Key terms: girlfriend (0.207), upset (0.082), expect (0.068), good thing (0.068), don want (0.066), object (0.063), nagging (0.063), drew (0.063), yeah don (0.063), weirdo (0.063)
+
+Topic 48: 48_door_outside_buttons_waited
+Key terms: door (0.283), outside (0.178), buttons (0.112), waited (0.112), does think (0.112), underpants (0.112), keys (0.104), lock (0.104), think did (0.104), gonna learn (0.104)
+
+Topic 49: 49_miss_bedtime_right yeah_plus
+Key terms: miss (0.331), bedtime (0.089), right yeah (0.089), plus (0.089), equals (0.089), yeah right (0.089), hey good (0.089), good love (0.083), oh feel (0.083), love (0.073)
+
+Topic 50: 50_rats_bleugh_rats rats_
+Key terms: rats (1.675), bleugh (1.106), rats rats (1.006),  (0.000),  (0.000),  (0.000),  (0.000),  (0.000),  (0.000),  (0.000)
+
+Topic 51: 51_howard_bernadette_returning_expected
+Key terms: howard (0.297), bernadette (0.078), returning (0.064), expected (0.060), wars (0.060), hot dog (0.060), bottles (0.060), proton (0.060), forever (0.060), convinced (0.060)
+
+Topic 52: 52_stephen_record_word_men
+Key terms: stephen (0.150), record (0.122), word (0.089), men (0.086), july (0.086), walked (0.086), 18 (0.086), fourth july (0.086), wheels (0.080), fourth (0.075)
+
+Topic 53: 53_ahead say_hear_say say_annoying ahead
+Key terms: ahead say (0.083), hear (0.076), say say (0.072), annoying ahead (0.066), annoying (0.065), ahead (0.060), bus (0.052), word (0.049), oh got (0.047), hear oh (0.047)
+
+Topic 54: 54_proud_control_rock_right choice
+Key terms: proud (0.130), control (0.111), rock (0.078), right choice (0.078), going guess (0.078), know proud (0.078), piece (0.068), truly (0.068), just say (0.065), touch (0.065)
+
+Topic 55: 55_room_wait wait_old_old room
+Key terms: room (0.130), wait wait (0.116), old (0.077), old room (0.071), struggling (0.071), bedroom (0.071), believes (0.071), beverley (0.071), fantastic (0.071), consider (0.071)
+
+Topic 56: 56_uncomfortable_sex_foreplay_oh just
+Key terms: uncomfortable (0.065), sex (0.057), foreplay (0.057), oh just (0.056), know doesn (0.053), like extremely (0.053), physical relationship (0.053), closure (0.053), okay oh (0.050), extremely (0.050)
+
+Topic 57: 57_monkeys_oh oh_monkey_kill
+Key terms: monkeys (0.275), oh oh (0.093), monkey (0.071), kill (0.066), 14 (0.060), dip (0.060), generally (0.060), challenged (0.055), pop (0.055), shoe (0.052)
+
+Topic 58: 58_sign_right sorry_behaviour_contract
+Key terms: sign (0.135), right sorry (0.118), behaviour (0.108), contract (0.095), say think (0.095), inappropriate (0.095), type (0.088), mutual (0.088), stamp (0.088), don start (0.088)
+
+Topic 59: 59_amy amy_amy_additionally_times like
+Key terms: amy amy (0.427), amy (0.188), additionally (0.053), times like (0.053), commitment (0.053), stroke (0.050), care amy (0.047), repeat (0.045), comfort (0.043), times (0.040)
+
+Topic 60: 60_panic_parasite_attack_briefly
+Key terms: panic (0.102), parasite (0.102), attack (0.098), briefly (0.061), experiencing (0.061), sensation (0.061), region (0.057), following (0.057), covering (0.057), message (0.057)
+
+Topic 61: 61_joke_humour_set_speaking
+Key terms: joke (0.165), humour (0.101), set (0.066), speaking (0.065), met (0.058), face (0.058), long (0.056), breaking (0.055), cares (0.055), just hit (0.055)
+
+Topic 62: 62_tea_cold_bags_gonna let
+Key terms: tea (0.343), cold (0.195), bags (0.176), gonna let (0.106), fix (0.106), slide (0.099), cup (0.088), don like (0.075), oh don (0.073), little (0.061)
+
+Topic 63: 63_spend time_spend_time_come think
+Key terms: spend time (0.147), spend (0.115), time (0.097), come think (0.088), confused (0.088), running time (0.082), like man (0.082), everybody (0.082), needed (0.082), spoke (0.074)
+
+Topic 64: 64_fault_age_40_article
+Key terms: fault (0.275), age (0.186), 40 (0.176), article (0.176), scientist (0.106), smartest (0.099), prize (0.099), nobel (0.099), drawn (0.099), scientists (0.093)
+
+Topic 65: 65_alcohol_wake_tastes_clean
+Key terms: alcohol (0.102), wake (0.086), tastes (0.086), clean (0.086), trying figure (0.080), ridiculous (0.080), warm (0.071), wild (0.071), girls (0.071), yummy (0.068)
+
+Topic 66: 66_experience_enjoy_pretend_decided
+Key terms: experience (0.123), enjoy (0.122), pretend (0.094), decided (0.094), nice (0.091), pretending (0.087), facial expression (0.087), expression (0.087), chased (0.082), working (0.079)
+
+Topic 67: 67_string theory_string_theory_hit
+Key terms: string theory (0.092), string (0.088), theory (0.076), hit (0.055), sound like (0.055), doesn mean (0.055), went wizarding (0.051), pretty funny (0.051), trouble (0.051), challenged (0.051)
+
+Topic 68: 68_doing doing_doing_wrong wrong_problem
+Key terms: doing doing (0.742), doing (0.510), wrong wrong (0.233), problem (0.217), going wrong (0.212), wrong (0.200), going (0.102), okay (0.064),  (0.000),  (0.000)
+
+Topic 69: 69_awkward_awkwardness_right kind_maybe right
+Key terms: awkward (0.164), awkwardness (0.123), right kind (0.094), maybe right (0.094), expression (0.087), kind looks (0.087), facial expression (0.087), know kind (0.087), lump (0.087), facial (0.078)
+
+Topic 70: 70_couch_sleep_good night_work
+Key terms: couch (0.203), sleep (0.141), good night (0.118), work (0.109), favourites (0.088), watching (0.078), fine let (0.078), chose (0.074), hi (0.074), ll let (0.070)
+
+Topic 71: 71_walk_closer_case_stole
+Key terms: walk (0.186), closer (0.178), case (0.152), stole (0.109), headed (0.109), slow (0.109), fine okay (0.109), emergency (0.109), ride (0.097), radio (0.093)
+
+Topic 72: 72_talk_work let_details_google
+Key terms: talk (0.146), work let (0.067), details (0.067), google (0.067), contains (0.067), topics (0.062), like man (0.062), talks (0.062), talk like (0.062), discussed (0.062)
+
+Topic 73: 73_sat_water_cut_headed
+Key terms: sat (0.209), water (0.173), cut (0.117), headed (0.117), oh guy (0.117), mountain (0.117), yeah oh (0.110), panic (0.105), computer (0.105), just got (0.096)
+
+Topic 74: 74_car_drive_lock_spot
+Key terms: car (0.196), drive (0.134), lock (0.105), spot (0.105), square (0.094), pull (0.094), yeah okay (0.094), requires (0.094), public (0.090), business (0.083)
+
+Topic 75: 75_cake_regular_boring_english
+Key terms: cake (0.211), regular (0.112), boring (0.112), english (0.100), ugh (0.088), excited (0.078), comes (0.068), dinner table (0.066), sceptical (0.066), birthday cake (0.066)
+
+Topic 76: 76_um_mm hmm_mm_hmm mm
+Key terms: um (0.629), mm hmm (0.515), mm (0.382), hmm mm (0.310), hmm (0.255), hmm aw (0.170), aw (0.098), man (0.057),  (0.000),  (0.000)
+
+Topic 77: 77_list_solution_know think_oh suppose
+Key terms: list (0.208), solution (0.096), know think (0.096), oh suppose (0.096), right um (0.096), tell oh (0.096), bought (0.082), started (0.076), parts (0.073), case (0.067)
+
+Topic 78: 78_dumb_youth_sell_eggs
+Key terms: dumb (0.159), youth (0.112), sell (0.112), eggs (0.112), cycles (0.112), wheat (0.104), mental (0.104), 36 (0.104), lives (0.098), field (0.098)
+
+Topic 79: 79_oh oh_oh dear_dear_said oh
+Key terms: oh oh (0.250), oh dear (0.249), dear (0.221), said oh (0.192), dear lord (0.160), ha (0.146), lord (0.132), oh (0.113), pretty good (0.096), good oh (0.096)
+
+Topic 80: 80_don think_good idea_idea_don know
+Key terms: don think (0.188), good idea (0.174), idea (0.116), don know (0.114), thought (0.091), hadn (0.087), break (0.087), maybe (0.086), write (0.082), don (0.077)
+
+Topic 81: 81_date_date night_committee_tenure
+Key terms: date (0.193), date night (0.131), committee (0.125), tenure (0.099), night (0.080), later (0.062), wait just (0.059), tedious (0.059), eh (0.059), honestly (0.059)
+
+Topic 82: 82_brain_easily_bothered_heat
+Key terms: brain (0.134), easily (0.124), bothered (0.115), heat (0.115), birds (0.109), stick (0.103), smell (0.099), light (0.081), sound (0.081), hold (0.075)
+
+Topic 83: 83_apologize_bathroom_schedule_toilet
+Key terms: apologize (0.163), bathroom (0.148), schedule (0.129), toilet (0.123), things going (0.098), spending (0.098), forever (0.091), struck (0.091), takes (0.086), mood (0.078)
+
+Topic 84: 84_ow_da_da da_meeting
+Key terms: ow (0.527), da (0.494), da da (0.431), meeting (0.205), spotted (0.166), troubling (0.149), street (0.120), word (0.093), mind (0.075), ah (0.054)
+
+Topic 85: 85_mood_kill_taking_guy
+Key terms: mood (0.728), kill (0.539), taking (0.260), guy (0.191), killing (0.183), way (0.127), kind (0.122), did (0.093), right (0.061),  (0.000)
+
+Topic 86: 86_barry kripke_kripke_let know_sneak
+Key terms: barry kripke (0.095), kripke (0.088), let know (0.088), sneak (0.088), barry (0.088), just happy (0.088), log (0.083), sitting (0.083), expressed (0.079), public (0.075)
+
+Topic 87: 87_tell_know mean_mean tell_somebody
+Key terms: tell (0.175), know mean (0.164), mean tell (0.153), somebody (0.121), make decision (0.090), sure think (0.090), decision refuse (0.090), need explain (0.090), clearly want (0.090), thank tell (0.090)
+
+Topic 88: 88_relationship agreement_agreement_relationship_known
+Key terms: relationship agreement (0.253), agreement (0.223), relationship (0.157), known (0.089), boyfriend amy (0.079), section (0.079), loophole (0.079), red (0.063), designed (0.058), present (0.054)
+
+Topic 89: 89_dna_ha_monkeys_zoo
+Key terms: dna (0.116), ha (0.106), monkeys (0.075), zoo (0.069), mankind (0.069), avoided (0.069), medium (0.069), view (0.069), reverse (0.069), ha ha (0.065)
+
+Topic 90: 90_funeral_bob_young_couples
+Key terms: funeral (0.103), bob (0.103), young (0.097), couples (0.097), mr (0.092), hoping (0.092), great deal (0.092), mother (0.086), ha (0.084), engage (0.084)
+
+Topic 91: 91_doctor_stone_participate_uh uh
+Key terms: doctor (0.196), stone (0.156), participate (0.112), uh uh (0.104), ones (0.104), nobel (0.104), good reason (0.104), stroke (0.098), uh (0.093), quick (0.089)
+
+Topic 92: 92_juvenile_girls_little_little little
+Key terms: juvenile (0.468), girls (0.419), little (0.291), little little (0.277), just just (0.252), isn (0.238), just (0.077), yeah (0.053), like (0.032),  (0.000)
+
+Topic 93: 93_wall_wondering_arrangements_boy girl
+Key terms: wall (0.103), wondering (0.103), arrangements (0.103), boy girl (0.096), babies (0.096), warning (0.096), family (0.086), sleeping (0.086), friendly (0.082), pillow (0.082)
+
+Topic 94: 94_trip_unclear_gone_trick
+Key terms: trip (0.259), unclear (0.107), gone (0.105), trick (0.100), effort (0.094), appreciate (0.094), takes (0.094), accept (0.089), spoke (0.089), week (0.089)
+
+Topic 95: 95_sleep_nap_oh speaking_heck
+Key terms: sleep (0.171), nap (0.161), oh speaking (0.150), heck (0.150), naked (0.150), thinking happened (0.150), milk (0.141), kept (0.134), earlier (0.123), bus (0.118)
+
+Topic 96: 96_late_home_sorry late_come home
+Key terms: late (0.281), home (0.147), sorry late (0.147), come home (0.147), busy (0.138), hi (0.131), know like (0.112), live (0.093), house know (0.087), guy (0.082)
+
+Topic 97: 97_romance_wine_juice_mmm
+Key terms: romance (0.193), wine (0.154), juice (0.154), mmm (0.088), oh look (0.084), point (0.081), eyes (0.076), win (0.076), physics (0.070), yeah thank (0.061)
+
+Topic 98: 98_explains_page_yeah yeah_yeah
+Key terms: explains (1.150), page (1.070), yeah yeah (0.575), yeah (0.243),  (0.000),  (0.000),  (0.000),  (0.000),  (0.000),  (0.000)
+
+Topic 99: 99_reject_read_come_hideous
+Key terms: reject (0.805), read (0.464), come (0.420), hideous (0.403), got (0.132), right (0.067),  (0.000),  (0.000),  (0.000),  (0.000)
+
+Topic 100: 100_using_vegetable_anger_oil
+Key terms: using (0.237), vegetable (0.192), anger (0.192), oil (0.178), mental (0.178), wheat (0.178), drawn (0.178), equal (0.178), ingredient (0.178), salt (0.168)
+
+Topic 101: 101_day_haven_haven forgotten_oh speaking
+Key terms: day (0.233), haven (0.189), haven forgotten (0.139), oh speaking (0.139), forgotten (0.139), log (0.131), act (0.119), tonight (0.092), speaking (0.088), day oh (0.082)
+
+Topic 102: 102_message_oh right_right sorry_right oh
+Key terms: message (0.299), oh right (0.282), right sorry (0.268), right oh (0.161), maybe right (0.161), okay (0.147), apologies (0.128), right (0.107), sorry (0.105), guess (0.105)
+
+Topic 103: 103_theme_star trek_trek_star
+Key terms: theme (0.197), star trek (0.110), trek (0.110), star (0.097), employ (0.089), gonna learn (0.083), pets (0.083), traffic (0.083), left choice (0.083), want come (0.083)
+
+Topic 104: 104_ethical conundrum_conundrum_ethical_today don
+Key terms: ethical conundrum (0.099), conundrum (0.099), ethical (0.099), today don (0.099), thrones (0.092), don need (0.092), amy ve (0.092), sword (0.092), game thrones (0.092), edition (0.087)
+
+Topic 105: 105_mother_thinks_mother thought_forward
+Key terms: mother (0.369), thinks (0.197), mother thought (0.141), forward (0.112), deal (0.108), running (0.104), fact (0.089), moving (0.087), life (0.080), agreement (0.080)
+
+Topic 106: 106_blow_coitus_men_time like
+Key terms: blow (0.180), coitus (0.161), men (0.152), time like (0.094), interesting (0.089), know ve (0.083), women (0.081), tried (0.081), hair (0.081), fact (0.072)
+
