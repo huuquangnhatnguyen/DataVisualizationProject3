@@ -8,6 +8,19 @@ const mainCharacters = [
   "Raj",
   "Amy",
 ];
+
+var colorScale = d3
+  .scaleOrdinal()
+  .domain(mainCharacters)
+  .range([
+    "#FF6B6B",
+    "#4DABF7",
+    "#69DB7C",
+    "#B197FC",
+    "#FFA94D",
+    "#FFD43B",
+    "#38D9A9",
+  ]);
 document.getElementById("defaultOpen").click();
 
 const filePathByEpisodes = `data/script_scrape/big_bang_main_character_dialogues.csv`;
@@ -270,4 +283,82 @@ function handleSeasonChangeChord(event) {
     });
     chordChart.updateData(matrix, mainCharacters);
   });
+}
+
+let barChart;
+let barMode = "Seasonal"; // default mode for Bar chart
+let selectedSeasonBar = 1; // default season for Bar chart
+let selectedCharacterBar = mainCharacters[1]; // default character for Bar chart
+let color;
+d3.csv("data/sheldon_labeled_topics_per_character_season.csv").then((data) => {
+  data.forEach((d) => {
+    d.n = +d.n;
+    d.year = +d.year;
+  });
+  let filterredData = BarChartDataFilterBySeason(selectedSeasonBar, data);
+  filterredData = BarChartDataFilterByCharacter(
+    selectedCharacterBar,
+    filterredData
+  );
+
+  barChart = new BarChart(
+    {
+      parentElement: "#bar-chart",
+      containerWidth: 800,
+      containerHeight: 600,
+      margin: { top: 40, right: 30, bottom: 50, left: 60 },
+    },
+    filterredData,
+    mainCharacters,
+    {
+      color: colorScale(selectedCharacterBar),
+    }
+  );
+});
+
+function BarChartDataFilterBySeason(season, data) {
+  let filterredData = data.filter((d) => d.year === season);
+  return filterredData;
+}
+
+function BarChartDataFilterByCharacter(character, data) {
+  let filterredData = data.filter((d) => d.character === character);
+  return filterredData;
+}
+
+function handleSeasonChangeBar(event) {
+  selectedSeasonBar = Number(event.target.value);
+  console.log(selectedCharacterBar);
+  d3.csv("data/sheldon_labeled_topics_per_character_season.csv").then(
+    (data) => {
+      data.forEach((d) => {
+        d.n = +d.n;
+        d.year = +d.year;
+      });
+      let filterredData = BarChartDataFilterBySeason(selectedSeasonBar, data);
+      filterredData = BarChartDataFilterByCharacter(
+        selectedCharacterBar,
+        filterredData
+      );
+      barChart.updateVis(filterredData, colorScale(selectedCharacterBar));
+    }
+  );
+}
+
+function handleCharacterChangeBar(event) {
+  selectedCharacterBar = event.target.value;
+  d3.csv("data/sheldon_labeled_topics_per_character_season.csv").then(
+    (data) => {
+      data.forEach((d) => {
+        d.n = +d.n;
+        d.year = +d.year;
+      });
+      let filterredData = BarChartDataFilterBySeason(selectedSeasonBar, data);
+      filterredData = BarChartDataFilterByCharacter(
+        selectedCharacterBar,
+        filterredData
+      );
+      barChart.updateVis(filterredData, colorScale(selectedCharacterBar));
+    }
+  );
 }

@@ -1,0 +1,205 @@
+year,character,topic_label,n
+4,Leonard,Roommate conflict,39
+2,Leonard,Roommate conflict,36
+1,Leonard,Roommate conflict,29
+5,Leonard,Roommate conflict,28
+6,Leonard,Roommate conflict,26
+3,Leonard,Roommate conflict,24
+3,Penny,Roommate conflict,23
+7,Penny,Roommate conflict,21
+7,Leonard,Roommate conflict,21
+8,Leonard,Roommate conflict,20
+2,Penny,Relationship tension,20
+3,Leonard,Food & preferences,20
+1,Leonard,Sci-fi hobbies,18
+6,Leonard,Workplace tension,17
+2,Penny,Roommate conflict,16
+6,Penny,Roommate conflict,15
+7,Amy,Romantic reassurance,15
+1,Leonard,Other,14
+3,Raj,Emotional sensitivity,13
+2,Penny,Other,13
+10,Amy,Living arrangement,13
+4,Penny,Family issues,13
+7,Leonard,Other,13
+9,Amy,Birthday tension,13
+9,Leonard,Roommate conflict,13
+10,Amy,Family issues,13
+2,Penny,Other,12
+1,Leonard,Other,12
+10,Amy,Other,12
+10,Amy,Other,12
+3,Leonard,Other,12
+2,Leonard,Other,12
+6,Leonard,Other,12
+9,Leonard,Petty grievances,12
+4,Penny,Career struggle,12
+4,Amy,Other,12
+4,Penny,Other,11
+5,Leonard,Roommate conflict,11
+5,Leonard,Other,11
+4,Raj,Other,11
+8,Leonard,Behavior critique,11
+5,Amy,Flag interest,11
+9,Leonard,Roommate conflict,11
+3,Penny,Food & preferences,11
+2,Leonard,Other,10
+4,Howard,Other,10
+9,Amy,Relationship argument,10
+9,Amy,Loneliness,10
+7,Penny,Social habits,10
+4,Amy,Other,10
+3,Raj,Other,10
+3,Penny,Other,10
+6,Raj,Workplace tension,9
+5,Leonard,Other,9
+4,Leonard,Routine obsession,9
+3,Penny,Other,9
+3,Leonard,Roommate conflict,9
+2,Leonard,Other,9
+2,Howard,Nerd culture,9
+3,Raj,Other,9
+8,Leonard,Other,9
+7,Amy,Romantic intimacy,9
+9,Amy,Other,9
+9,Leonard,Other,9
+6,Penny,Social awkwardness,9
+6,Amy,Other,8
+4,Leonard,Roommate conflict,8
+4,Leonard,Other,8
+8,Amy,Flag interest,8
+7,Penny,Other,8
+7,Leonard,Loneliness,8
+9,Bernadette,Culture reference,8
+6,Leonard,Other,8
+3,Howard,Other,8
+8,Penny,Other,8
+4,Raj,Other,8
+4,Penny,Other,8
+7,Leonard,Other,8
+8,Penny,Other,8
+3,Howard,Other,8
+1,Penny,Other,7
+7,Howard,Routine obsession,7
+6,Penny,Other,7
+8,Leonard,Other,7
+5,Howard,Workplace tension,7
+7,Penny,Other,7
+9,Penny,Other,7
+6,Amy,Other,7
+1,Penny,Roommate conflict,7
+9,Penny,Other,7
+4,Raj,Other,7
+8,Amy,Meal conflict,7
+8,Amy,Roommate conflict,7
+4,Amy,Scientific discussion,7
+8,Penny,Other,7
+6,Howard,Other,7
+10,Leonard,Roommate conflict,7
+4,Raj,Emotional sensitivity,7
+10,Leonard,Other,7
+3,Raj,Other,7
+1,Penny,Other,7
+1,Penny,Behavior critique,7
+10,Leonard,Family issues,7
+10,Leonard,Other,7
+7,Amy,Other,7
+7,Amy,Other,7
+8,Penny,Roommate conflict,6
+4,Howard,Hobbies and entertainment,6
+8,Raj,Other,6
+8,Amy,Other,6
+5,Amy,Biological analogy,6
+5,Amy,Other,6
+5,Amy,Other,6
+3,Howard,Other,6
+4,Amy,Other,6
+5,Penny,Other,6
+5,Howard,Other,6
+7,Raj,Social awkwardness,6
+6,Penny,Other,6
+2,Howard,Roommate conflict,6
+5,Penny,Other,6
+5,Howard,Other,6
+2,Raj,Sci-fi references,6
+10,Raj,Emotional sensitivity,6
+3,Howard,Family issues,5
+6,Howard,Workplace tension,5
+7,Howard,Family issues,5
+5,Raj,Emotional sensitivity,5
+8,Raj,Loneliness,5
+9,Penny,Sci-fi references,5
+9,Penny,Other,5
+6,Amy,Other,5
+6,Amy,Social awkwardness,5
+2,Howard,Other,5
+9,Bernadette,Parenting pressure,5
+5,Penny,Other,5
+5,Penny,Food & preferences,5
+10,Raj,Other,5
+1,Howard,Other,5
+10,Penny,Other,5
+10,Penny,Other,5
+7,Raj,Other,4
+2,Howard,Other,4
+1,Howard,Roommate conflict,4
+5,Howard,Other,4
+8,Raj,Other,4
+8,Raj,Other,4
+4,Howard,Other,4
+4,Howard,Loneliness,4
+9,Raj,Other,4
+9,Raj,Emotional sensitivity,4
+10,Penny,Other,4
+10,Penny,Parenting pressure,4
+10,Raj,Other,4
+1,Howard,Other,4
+1,Howard,Other,4
+9,Bernadette,Other,4
+9,Bernadette,Nerd culture,4
+1,Raj,Other,4
+1,Raj,Other,4
+8,Howard,Other,4
+8,Howard,Other,4
+6,Raj,Other,4
+10,Howard,Nerd culture,4
+9,Howard,Other,4
+2,Raj,Sci-fi references,4
+2,Raj,Other,4
+7,Howard,Other,4
+6,Raj,Other,4
+6,Howard,Roommate conflict,4
+2,Raj,Other,4
+7,Howard,Other,4
+10,Raj,Other,3
+5,Raj,Fear & anxiety,3
+5,Raj,Other,3
+5,Raj,Social awkwardness,3
+6,Howard,Other,3
+7,Raj,Other,3
+7,Raj,Other,3
+6,Raj,Roommate conflict,3
+1,Raj,Other,3
+1,Raj,Other,3
+10,Bernadette,Parenting pressure,3
+10,Howard,Other,3
+5,Bernadette,Other,3
+8,Howard,Loneliness,3
+8,Howard,Apologies,3
+9,Howard,Emotional sensitivity,3
+9,Howard,Other,3
+9,Howard,Other,3
+9,Raj,Other,3
+9,Raj,Other,3
+10,Howard,Other,2
+10,Howard,Other,2
+8,Bernadette,Other,2
+5,Bernadette,Other,2
+5,Bernadette,Other,2
+5,Bernadette,Parenting pressure,2
+8,Bernadette,Other,2
+8,Bernadette,Other,2
+8,Bernadette,Other,2
+10,Bernadette,Other,2
+10,Bernadette,Other,2
+10,Bernadette,Other,2
