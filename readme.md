@@ -2,7 +2,7 @@
 
 # Group 13:
 
-## Project 3: TV shows Documentation
+## Project 3: Big Bang Theory Characters Visualization
 
 ### Team Member:
 
