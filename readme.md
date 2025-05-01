@@ -90,6 +90,7 @@ This shows each of the main character's favorite unique words. Again, viewers ca
 ### Chord Chart
 The Chord diagram visualizes the interactions between characters in the show. Each character is represented by a colored arc, and the connections between them indicate the frequency of their dialogues. The thickness of the lines represents the strength of their interactions, providing insights into the dynamics of their relationships throughout the series.
 - Justification: after some thinking, we went with the chord chart since it was simple and effective in showing this type of relational data we wanted to show.
+
 ![image](https://github.com/user-attachments/assets/b5899bde-20be-4afe-a176-04651f37399f)
 
 ### Bar Chart to show the most mentioned topics in the show between characters
@@ -101,6 +102,7 @@ The Bar chart visualizes the topics of interest that Sheldon Cooper, one of the 
 
 ## Key Findings
 - Looking at the stacked chart we can see that whenever a new main character (Amy and Bernadette) debuts there will certainly be a drop in total number of lines for each character! We are faily sure these changes are made to fit all characters within the set time frame for each episode.
+  
 ![Stacked Chart](image-2.png)
 
 - The cast love each other! Looking at our word cloud, we can see that most of the most said words from each character is the name of another character (or themselves). How sweet!
@@ -111,10 +113,14 @@ The Bar chart visualizes the topics of interest that Sheldon Cooper, one of the 
 
 ## Technicality
 The entirety of our code can be found right here in this repo (https://github.com/huuquangnhatnguyen/DataVisualizationProject3)
-The live demo can be found here ![](https://data-visualization-project3.vercel.app/)
-We used Beauty4Soup for web scraping to get the scripts.
-We used D3 for drawing most of the visualizations: Stacked Area Chart, Voronoi Chart, Chord Diagram, Bar Chart, Bubble Chart 
-We used Pandas, Pytorch and Scala for data processing.
+
+The live demo can be found [here](https://data-visualization-project3.vercel.app/)
+
+Our tech stacks:
+- We used Beauty4Soup for web scraping to get the scripts.
+- We used D3 for drawing most of the visualizations: Stacked Area Chart, Voronoi Chart, Chord Diagram, Bar Chart, Bubble Chart 
+- We used Pandas, Pytorch and Scala for data processing.
+
 
 ### Sketches
 First Draft...
