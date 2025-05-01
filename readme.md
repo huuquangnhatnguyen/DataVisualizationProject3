@@ -2,11 +2,7 @@
 
 # Group 13:
 
-## Project 3: TV shows
-
-## Guideline:
-
-- clone this repo and read the module description
+## Project 3: TV shows Documentation
 
 ### Team Member:
 
@@ -14,46 +10,36 @@
 - Long Nguyen
 - Du Nguyen
 
-### Project Structure
+### Code Base Structure
 
 - `css` folder: stores all the styling files
 - `data` folder: stores .csv files
 - `images` folder: stores any images used on the page
 - `js` folder: stores all the bts `js` code
-- `documentation` folder: stores any documentation
+- `documentation` folder: stores any documentation resources
 
-### Coordinating plan
+## Motivation
+The motivation behind this application is to explore the evolving character dynamics and thematic focus in The Big Bang Theory, particularly through the lens of Sheldon Cooper’s dialogues. As one of the most iconic and complex characters, Sheldon’s interactions reflect much of the show's humor, tension, and emotional growth.
 
-- We will meet once a week for updates. We prefer to have in-person meeting during weekday after class or any necessary online meeting after class
+By using topic modeling and structured dialogue analysis across seasons and characters, this application seeks to quantify and visualize:
 
-- We will used branches for commiting our code to the online code base and will have a code review before merging any branches to main
+How Sheldon’s conversational focus changes over time
 
-### Sketches
-First Draft...
-![First Sketch](image.png)
+Which characters he discusses certain topics with
 
-More detailed
-![Detailed](image-1.png)
+Recurring themes like roommate disputes, scientific debates, romantic struggles, and social misunderstandings
 
-Level 1:
-- A little intro header with tabs that introduce each main character
-- We really liked the idea of a voronoi map and wanted to include it somewhere in our page, so we incorporated 2 views of showing the number of lines for each character. One is a stacked bar chart, better for seeing the season-to-season changes, and one as a voronoi, better to compare one character against another.
+### What This Enables Someone to Understand
+#### Character Development
+Track how Sheldon’s priorities shift — from rigid routines and roommate conflicts in early seasons to more emotional and romantic topics in later ones (especially involving Amy).
 
-Levels 2 and 3:
-- For the word cloud, we went with a bubble chart showing each character's most common word found in their script.
-- Since the word cloud already used a bubble view, we went with a chord chart to show the relationship between characters, which we found by making a script that would find dialogues between characters in the same scenes.
+#### Relationship Dynamics
+Understand the nature of Sheldon’s interactions with other characters (e.g., constant negotiation with Leonard, evolving romance with Amy, cultural clashes with Penny).
 
-Level 4: 
-- We went with finding what Penny and Sheldon were discussing most in the show. Since they have a lot of presence together, it'd be interesting to see what they have to say.
+#### Show Structure & Themes
+Reveal how certain running jokes, nerd culture references, and scientific discussions are distributed across seasons and characters.
 
-### Timeline
-- 1 - 13 April: Gathering and Processing Data, making sketches, and experimenting.
-- 14 - 20 April: Making the web page. Incorporate charts and visualizations, make necessary changes to the data.
-- 20 - 29 April: Finalizing, and turning in the web app.
-
-# Project 2 Documentation
-
-### Data
+## Data
 
 **Dataset**: 
 - [Here](data/raw/big_bang_scripts.csv) is our raw dataset.
@@ -102,9 +88,14 @@ This shows each of the main character's favorite unique words. Again, viewers ca
 ![alt text](image-5.png) 
 
 ### Chord Chart
-This chart will effectively show the main cast's relationship with each other, with stronger bonds (they just have more dialogue with each other) being thicker and connecting to each other.
+The Chord diagram visualizes the interactions between characters in the show. Each character is represented by a colored arc, and the connections between them indicate the frequency of their dialogues. The thickness of the lines represents the strength of their interactions, providing insights into the dynamics of their relationships throughout the series.
 - Justification: after some thinking, we went with the chord chart since it was simple and effective in showing this type of relational data we wanted to show.
-*INSERT PICTURE HERE*
+![image](https://github.com/user-attachments/assets/b5899bde-20be-4afe-a176-04651f37399f)
+
+### Bar Chart to show the most mentioned topics in the show between characters
+The Bar chart visualizes the topics of interest that Sheldon Cooper, one of the main characters, frequently discusses. Each bar represents a specific topic, and its length indicates the number of times Sheldon mentions it throughout the series. This chart provides insights into Sheldon's character and his intellectual pursuits, showcasing the themes that resonate most with him.
+- Justification: We wonder if bar chart or line chart will show the changes in topics between seasons. However, we come to the conclusion that bar chart is better in showing the dominance in a topic comparing to the others between Sheldon and other characters. We also include 2 select options to toggle between seasons and characters.
+![image](https://github.com/user-attachments/assets/81f1073c-fa1b-4cae-87c1-7c5ebbd778cb)
 
 
 
@@ -115,9 +106,34 @@ This chart will effectively show the main cast's relationship with each other, w
 - The cast love each other! Looking at our word cloud, we can see that most of the most said words from each character is the name of another character (or themselves). How sweet!
 ![alt text](image-6.png)
 
+- We can see the word 'know' being used a lot among characters. This totally makes sense, since this is a humor-scientific show. "I know" or "Do you know ... " have been used a lot ! How interesting it is!
+- we can also see a deeper connection is formed between Sheldon and Leonard with a large number of dialogues between them comparing to other relationship in the show. This is actually true when Sheldon and Leonards are best friends in the show.
 
 ## Technicality
 The entirety of our code can be found right here in this repo (https://github.com/huuquangnhatnguyen/DataVisualizationProject3)
+The live demo can be found here ![](https://data-visualization-project3.vercel.app/)
+We used Beauty4Soup for web scraping to get the scripts.
+We used D3 for drawing most of the visualizations: Stacked Area Chart, Voronoi Chart, Chord Diagram, Bar Chart, Bubble Chart 
+We used Pandas, Pytorch and Scala for data processing.
+
+### Sketches
+First Draft...
+![First Sketch](image.png)
+
+More detailed
+![Detailed](image-1.png)
+
+Level 1:
+- A little intro header with tabs that introduce each main character
+- We really liked the idea of a voronoi map and wanted to include it somewhere in our page, so we incorporated 2 views of showing the number of lines for each character. One is a stacked bar chart, better for seeing the season-to-season changes, and one as a voronoi, better to compare one character against another.
+
+Levels 2 and 3:
+- For the word cloud, we went with a bubble chart showing each character's most common word found in their script.
+- Since the word cloud already used a bubble view, we went with a chord chart to show the relationship between characters, which we found by making a script that would find dialogues between characters in the same scenes.
+
+Level 4: 
+- We went with finding what Penny and Sheldon were discussing most in the show. Since they have a lot of presence together, it'd be interesting to see what they have to say.
+
 
 ## Demo Video
 https://youtu.be/-hE2pWrIHNU?si=1xt2JKjG2DxfBNxk
@@ -128,6 +144,8 @@ We split up the work like so: each person handles a little bit of each level, tr
 #### Nhat Nguyen:
 - Implementing Stacked Chart.
 - Process Data for Chord Chart.
+- Implementing Voronoi Chart
+- Implementing Bar Chart for Sheldon's topics
 - Debugging.
 
 #### Du Nguyen:
@@ -140,3 +158,4 @@ We split up the work like so: each person handles a little bit of each level, tr
 - Setting up color scheme, app layout and sketching ideas.
 - Implemented the Chord Chart.
 - Debugging.
+  
